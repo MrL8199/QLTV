@@ -47,22 +47,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\DataProvider.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="DTO\DocGia.cs" />
+    <Compile Include="GUI\DOCGIA\QL_DocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\DOCGIA\DocGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\DOCGIA\DocGia.Designer.cs">
-      <DependentUpon>DocGia.cs</DependentUpon>
+    <Compile Include="GUI\DOCGIA\QL_DocGia.Designer.cs">
+      <DependentUpon>QL_DocGia.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\DOCGIA\DocGia.resx">
-      <DependentUpon>DocGia.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\DOCGIA\QL_DocGia.resx">
+      <DependentUpon>QL_DocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,10 +83,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BUS\" />
-    <Folder Include="DTO\" />
     <Folder Include="GUI\KHO\" />
     <Folder Include="GUI\MUONTRA\" />
     <Folder Include="GUI\SACH\" />
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

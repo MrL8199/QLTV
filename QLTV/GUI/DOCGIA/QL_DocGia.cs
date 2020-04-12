@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLTV.GUI.DOCGIA
 {
-    public partial class DocGia : Form
+    public partial class QL_DocGia : Form
     {
-        public DocGia()
+        public QL_DocGia()
         {
             InitializeComponent();
         }
