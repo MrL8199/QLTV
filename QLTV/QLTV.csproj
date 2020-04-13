@@ -48,16 +48,71 @@
   <ItemGroup>
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DTO\DocGia.cs" />
+    <Compile Include="DTO\Kho.cs" />
     <Compile Include="GUI\DOCGIA\QL_DocGia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\DOCGIA\QL_DocGia.Designer.cs">
       <DependentUpon>QL_DocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\KHO\PhieuKiemKe_Kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KHO\PhieuKiemKe_Kho.Designer.cs">
+      <DependentUpon>PhieuKiemKe_Kho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KHO\PhieuNhap_Kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KHO\PhieuNhap_Kho.Designer.cs">
+      <DependentUpon>PhieuNhap_Kho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KHO\PhieuXuat_Kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KHO\PhieuXuat_Kho.Designer.cs">
+      <DependentUpon>PhieuXuat_Kho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KHO\QL_Kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KHO\QL_Kho.Designer.cs">
+      <DependentUpon>QL_Kho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KHO\QL_NhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KHO\QL_NhaCungCap.Designer.cs">
+      <DependentUpon>QL_NhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KHO\QL_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KHO\QL_NhanVien.Designer.cs">
+      <DependentUpon>QL_NhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\DOCGIA\QL_DocGia.resx">
       <DependentUpon>QL_DocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KHO\PhieuKiemKe_Kho.resx">
+      <DependentUpon>PhieuKiemKe_Kho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KHO\PhieuNhap_Kho.resx">
+      <DependentUpon>PhieuNhap_Kho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KHO\PhieuXuat_Kho.resx">
+      <DependentUpon>PhieuXuat_Kho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KHO\QL_Kho.resx">
+      <DependentUpon>QL_Kho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KHO\QL_NhaCungCap.resx">
+      <DependentUpon>QL_NhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KHO\QL_NhanVien.resx">
+      <DependentUpon>QL_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -83,7 +138,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BUS\" />
-    <Folder Include="GUI\KHO\" />
     <Folder Include="GUI\MUONTRA\" />
     <Folder Include="GUI\SACH\" />
     <Folder Include="Properties\DataSources\" />
