@@ -93,7 +93,12 @@
     <Compile Include="GUI\KHO\QL_NhanVien.Designer.cs">
       <DependentUpon>QL_NhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\MUONTRA\Class1.cs" />
+    <Compile Include="GUI\MUONTRA\QuanLyMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MUONTRA\Quản Lý Mượn Trả.Designer.cs">
+      <DependentUpon>QuanLyMuonTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\SACH\Class1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -117,6 +122,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KHO\QL_NhanVien.resx">
       <DependentUpon>QL_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MUONTRA\QuanLyMuonTra.resx">
+      <DependentUpon>QuanLyMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MUONTRA\Quản Lý Mượn Trả.resx">
+      <DependentUpon>QuanLyMuonTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
