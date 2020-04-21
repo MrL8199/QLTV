@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\DocGiaBUS.cs" />
     <Compile Include="DAL\DataProvider.cs" />
+    <Compile Include="DAL\DocGia_DAL.cs" />
     <Compile Include="DTO\DocGia.cs" />
     <Compile Include="DTO\Kho.cs" />
     <Compile Include="GUI\DOCGIA\QL_DocGia.cs">
@@ -91,6 +93,13 @@
     <Compile Include="GUI\KHO\QL_NhanVien.Designer.cs">
       <DependentUpon>QL_NhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\MUONTRA\QuanLyMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MUONTRA\Quản Lý Mượn Trả.Designer.cs">
+      <DependentUpon>QuanLyMuonTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SACH\Class1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\DOCGIA\QL_DocGia.resx">
@@ -113,6 +122,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KHO\QL_NhanVien.resx">
       <DependentUpon>QL_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MUONTRA\QuanLyMuonTra.resx">
+      <DependentUpon>QuanLyMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MUONTRA\Quản Lý Mượn Trả.resx">
+      <DependentUpon>QuanLyMuonTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,9 +152,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BUS\" />
-    <Folder Include="GUI\MUONTRA\" />
-    <Folder Include="GUI\SACH\" />
     <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

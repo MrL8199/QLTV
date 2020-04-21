@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QLTV.GUI.DOCGIA;
+using QLTV.GUI.KHO;
 
 namespace QLTV
 {
@@ -17,7 +17,7 @@ namespace QLTV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QL_DocGia());
+            Application.Run(new QL_Kho());
         }
     }
 }

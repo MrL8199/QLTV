@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,38 +9,54 @@ namespace QLTV.DTO
 {
     public class DocGia
     {
-        private string maThe;
+        private int maThe;
         private string tenDG;
         private string diaChi;
-        private string ngaySinh;
-        private string sdt;
+        private DateTime ngaySinh;
+        private int sdt;
         private string lop;
         private string trangThai;
-        private string ngayHetHan;
+        private DateTime ngayHetHan;
+        private int soLanGiaHan;
+
+        public int MaThe { get => maThe; set => maThe = value; }
+        public string TenDG { get => tenDG; set => tenDG = value; }
+        public string DiaChi { get => diaChi; set => diaChi = value; }
+        public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value; }
+        public int Sdt { get => sdt; set => sdt = value; }
+        public string Lop { get => lop; set => lop = value; }
+        public string TrangThai { get => trangThai; set => trangThai = value; }
+        public DateTime NgayHetHan { get => ngayHetHan; set => ngayHetHan = value; }
+        public int SoLanGiaHan { get => soLanGiaHan; set => soLanGiaHan = value; }
 
         public DocGia()
         {
         }
 
-        public DocGia(string maThe, string tenDG, string ngaySinh, string lop, string sdt, string diaChi, string ngayHetHan, string trangThai)
+        public DocGia(DataRow row)
+        {
+            this.MaThe = (int)row["MaThe"];
+            this.TenDG = (string)row["TenDG"];
+            this.Lop = (string)row["Lop"];
+            this.Sdt = (int)row["Sdt"];
+            this.DiaChi = (string)row["DiaChi"];
+            this.NgaySinh = (DateTime)row["NgaySinh"];
+            this.TrangThai = (string)row["TrangThai"];
+            this.SoLanGiaHan = (int)row["SoLanGiaHan"];
+            this.NgayHetHan = (DateTime)row["NgayHetHan"];
+        }
+
+        public DocGia(int maThe, string tenDG, string diaChi, DateTime ngaySinh, int sdt, string lop, string trangThai, DateTime ngayHetHan, int soLanGiaHan)
         {
             MaThe = maThe;
             TenDG = tenDG;
-            NgaySinh = ngaySinh;
-            Lop = lop;
-            Sdt = sdt;
             DiaChi = diaChi;
-            NgayHetHan = ngayHetHan;
+            NgaySinh = ngaySinh;
+            Sdt = sdt;
+            Lop = lop;
             TrangThai = trangThai;
+            NgayHetHan = ngayHetHan;
+            SoLanGiaHan = soLanGiaHan;
         }
-
-        public string MaThe { get => maThe; set => maThe = value; }
-        public string TenDG { get => tenDG; set => tenDG = value; }
-        public string NgaySinh { get => ngaySinh; set => ngaySinh = value; }
-        public string Lop { get => lop; set => lop = value; }
-        public string Sdt { get => sdt; set => sdt = value; }
-        public string DiaChi { get => diaChi; set => diaChi = value; }
-        public string NgayHetHan { get => ngayHetHan; set => ngayHetHan = value; }
-        public string TrangThai { get => trangThai; set => trangThai = value; }
     }
 }
