@@ -28,14 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,39 +39,24 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Crimson;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(150, 121);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(117, 45);
-            this.button3.TabIndex = 45;
-            this.button3.Text = "Xóa NCC";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Aqua;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(71, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 48);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "Tìm Kiếm";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -93,37 +73,23 @@
             this.button6.BackColor = System.Drawing.Color.PaleGreen;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(121, 245);
+            this.button6.Location = new System.Drawing.Point(39, 245);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(113, 35);
             this.button6.TabIndex = 54;
             this.button6.Text = "Thêm NCC";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(126, 33);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(150, 25);
-            this.comboBox4.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 36);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 17);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Mã NCC";
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.comboBox4);
+            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(419, 74);
             this.groupBox1.Name = "groupBox1";
@@ -132,28 +98,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(199, 67);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 48);
-            this.button2.TabIndex = 44;
-            this.button2.Text = "Sửa NCC";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.LightCoral;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(240, 245);
+            this.button5.Location = new System.Drawing.Point(314, 245);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(84, 35);
             this.button5.TabIndex = 53;
-            this.button5.Text = "Quay lại";
+            this.button5.Text = "Hủy";
             this.button5.UseVisualStyleBackColor = false;
             // 
             // textBox1
@@ -228,21 +182,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin NCC";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(138, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 25);
-            this.comboBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(138, 98);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 25);
-            this.textBox2.TabIndex = 48;
-            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(138, 129);
@@ -259,11 +198,122 @@
             this.label4.TabIndex = 49;
             this.label4.Text = "SDT";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(138, 98);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(150, 25);
+            this.textBox2.TabIndex = 48;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(138, 33);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(150, 25);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Yellow;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(126, 121);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(107, 45);
+            this.button4.TabIndex = 57;
+            this.button4.Text = "Sửa NCC";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(126, 90);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(84, 21);
+            this.radioButton2.TabIndex = 56;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Tên NCC";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(126, 63);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(81, 21);
+            this.radioButton1.TabIndex = 55;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Mã NCC";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 17);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "Tìm theo:";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Crimson;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(243, 121);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(103, 45);
+            this.button3.TabIndex = 53;
+            this.button3.Text = "Xóa NCC";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Aqua;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(6, 121);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 45);
+            this.button1.TabIndex = 52;
+            this.button1.Text = "Tìm Kiếm";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 17);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "Mời nhập";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(126, 27);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(150, 25);
+            this.textBox4.TabIndex = 58;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(174, 245);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(114, 35);
+            this.button2.TabIndex = 57;
+            this.button2.Text = "Cập Nhật";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // QL_NhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 496);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.groupBox1);
@@ -284,15 +334,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
@@ -305,5 +349,14 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button2;
     }
 }
