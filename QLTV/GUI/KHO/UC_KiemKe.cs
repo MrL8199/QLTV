@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QLTV.GUI.KHO
 {
-    public partial class PhieuXuat_Kho : Form
+    public partial class UC_KiemKe : UserControl
     {
-        public PhieuXuat_Kho()
+        public UC_KiemKe()
         {
             InitializeComponent();
-        }
-
-        private void PhieuXuat_Kho_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

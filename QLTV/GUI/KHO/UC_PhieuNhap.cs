@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace QLTV.GUI.KHO
 {
-    public partial class PhieuNhap_Kho : Form
+    public partial class UC_PhieuNhap : UserControl
     {
-        public PhieuNhap_Kho()
+        public UC_PhieuNhap()
         {
             InitializeComponent();
         }
 
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PhieuNhap_Kho_Load(object sender, EventArgs e)
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
