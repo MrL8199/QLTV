@@ -277,10 +277,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(138, 33);
             this.textBox1.Name = "textBox1";
-<<<<<<< HEAD
-=======
             this.textBox1.ReadOnly = true;
->>>>>>> c551f7f8a366863734e4c6ded336377f8dba96a1
             this.textBox1.Size = new System.Drawing.Size(150, 25);
             this.textBox1.TabIndex = 0;
             // 
@@ -312,14 +309,10 @@
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 21);
-<<<<<<< HEAD
-            this.dataGridView1.Name = "dataGridView1";
-=======
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
->>>>>>> c551f7f8a366863734e4c6ded336377f8dba96a1
             this.dataGridView1.Size = new System.Drawing.Size(770, 230);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -529,11 +522,7 @@
             this.tabPage1.Controls.Add(this.button6);
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
-<<<<<<< HEAD
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-=======
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
->>>>>>> c551f7f8a366863734e4c6ded336377f8dba96a1
             this.tabPage1.Size = new System.Drawing.Size(792, 508);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Độc giả";
@@ -553,11 +542,7 @@
             this.tabPage2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
-<<<<<<< HEAD
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-=======
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
->>>>>>> c551f7f8a366863734e4c6ded336377f8dba96a1
             this.tabPage2.Size = new System.Drawing.Size(792, 508);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Vi Phạm";
@@ -569,11 +554,7 @@
             this.button9.Enabled = false;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.button9.Location = new System.Drawing.Point(714, 210);
-=======
             this.button9.Location = new System.Drawing.Point(712, 203);
->>>>>>> c551f7f8a366863734e4c6ded336377f8dba96a1
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(70, 25);
             this.button9.TabIndex = 4;
@@ -586,11 +567,7 @@
             this.button10.Enabled = false;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.button10.Location = new System.Drawing.Point(641, 210);
-=======
             this.button10.Location = new System.Drawing.Point(639, 203);
->>>>>>> c551f7f8a366863734e4c6ded336377f8dba96a1
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(70, 25);
             this.button10.TabIndex = 5;
@@ -602,11 +579,7 @@
             this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.button11.Location = new System.Drawing.Point(565, 210);
-=======
             this.button11.Location = new System.Drawing.Point(563, 203);
->>>>>>> c551f7f8a366863734e4c6ded336377f8dba96a1
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(70, 25);
             this.button11.TabIndex = 6;
@@ -618,11 +591,7 @@
             this.button12.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.button12.Location = new System.Drawing.Point(489, 210);
-=======
             this.button12.Location = new System.Drawing.Point(487, 203);
->>>>>>> c551f7f8a366863734e4c6ded336377f8dba96a1
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(70, 25);
             this.button12.TabIndex = 7;
@@ -634,11 +603,7 @@
             this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.button13.Location = new System.Drawing.Point(413, 210);
-=======
             this.button13.Location = new System.Drawing.Point(411, 203);
->>>>>>> c551f7f8a366863734e4c6ded336377f8dba96a1
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(70, 25);
             this.button13.TabIndex = 8;
@@ -650,11 +615,7 @@
             this.button14.BackColor = System.Drawing.Color.PaleGreen;
             this.button14.FlatAppearance.BorderSize = 0;
             this.button14.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.button14.Location = new System.Drawing.Point(337, 210);
-=======
             this.button14.Location = new System.Drawing.Point(335, 203);
->>>>>>> c551f7f8a366863734e4c6ded336377f8dba96a1
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(70, 25);
             this.button14.TabIndex = 9;
@@ -668,11 +629,7 @@
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Controls.Add(this.textBox3);
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.groupBox4.Location = new System.Drawing.Point(8, 13);
-=======
             this.groupBox4.Location = new System.Drawing.Point(6, 6);
->>>>>>> c551f7f8a366863734e4c6ded336377f8dba96a1
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(236, 191);
             this.groupBox4.TabIndex = 1;
@@ -732,11 +689,7 @@
             this.groupBox5.Controls.Add(this.textBox12);
             this.groupBox5.Enabled = false;
             this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.groupBox5.Location = new System.Drawing.Point(250, 13);
-=======
             this.groupBox5.Location = new System.Drawing.Point(248, 6);
->>>>>>> c551f7f8a366863734e4c6ded336377f8dba96a1
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(534, 191);
             this.groupBox5.TabIndex = 2;
@@ -825,10 +778,7 @@
             // 
             this.textBox11.Location = new System.Drawing.Point(138, 64);
             this.textBox11.Name = "textBox11";
-<<<<<<< HEAD
-=======
             this.textBox11.ReadOnly = true;
->>>>>>> c551f7f8a366863734e4c6ded336377f8dba96a1
             this.textBox11.Size = new System.Drawing.Size(150, 25);
             this.textBox11.TabIndex = 0;
             // 
@@ -843,11 +793,7 @@
             // 
             this.groupBox6.Controls.Add(this.dataGridView2);
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.groupBox6.Location = new System.Drawing.Point(8, 241);
-=======
             this.groupBox6.Location = new System.Drawing.Point(6, 234);
->>>>>>> c551f7f8a366863734e4c6ded336377f8dba96a1
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(776, 254);
             this.groupBox6.TabIndex = 3;
@@ -869,11 +815,8 @@
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 21);
             this.dataGridView2.Name = "dataGridView2";
-<<<<<<< HEAD
-=======
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
->>>>>>> c551f7f8a366863734e4c6ded336377f8dba96a1
             this.dataGridView2.Size = new System.Drawing.Size(770, 230);
             this.dataGridView2.TabIndex = 0;
             // 
