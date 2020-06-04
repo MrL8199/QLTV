@@ -49,8 +49,10 @@
     <Compile Include="BUS\DocGiaBUS.cs" />
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\DocGia_DAL.cs" />
+    <Compile Include="DAL\MuonTra_DAL.cs" />
     <Compile Include="DTO\DocGia.cs" />
     <Compile Include="DTO\Kho.cs" />
+    <Compile Include="DTO\MuonTra.cs" />
     <Compile Include="GUI\DOCGIA\QL_DocGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,11 +101,11 @@
     <Compile Include="GUI\MainForm\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\MUONTRA\QuanLyMuonTra.cs">
+    <Compile Include="GUI\MUONTRA\QL_MuonTra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\MUONTRA\Quản Lý Mượn Trả.Designer.cs">
-      <DependentUpon>QuanLyMuonTra.cs</DependentUpon>
+    <Compile Include="GUI\MUONTRA\QL_MuonTra.Designer.cs">
+      <DependentUpon>QL_MuonTra.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\SACH\Class1.cs" />
     <Compile Include="Program.cs" />
@@ -132,8 +134,8 @@
     <EmbeddedResource Include="GUI\MainForm\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\MUONTRA\QuanLyMuonTra.resx">
-      <DependentUpon>QuanLyMuonTra.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\MUONTRA\QL_MuonTra.resx">
+      <DependentUpon>QL_MuonTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
