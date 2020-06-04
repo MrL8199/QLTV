@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,29 +59,12 @@
     <Compile Include="DTO\DocGia.cs" />
     <Compile Include="DTO\Kho.cs" />
     <Compile Include="DTO\MuonTra.cs" />
+    <Compile Include="DTO\ViPham.cs" />
     <Compile Include="GUI\DOCGIA\QL_DocGia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\DOCGIA\QL_DocGia.Designer.cs">
       <DependentUpon>QL_DocGia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\KHO\PhieuKiemKe_Kho.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\KHO\PhieuKiemKe_Kho.Designer.cs">
-      <DependentUpon>PhieuKiemKe_Kho.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\KHO\PhieuNhap_Kho.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\KHO\PhieuNhap_Kho.Designer.cs">
-      <DependentUpon>PhieuNhap_Kho.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\KHO\PhieuXuat_Kho.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\KHO\PhieuXuat_Kho.Designer.cs">
-      <DependentUpon>PhieuXuat_Kho.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\KHO\QL_Kho.cs">
       <SubType>Form</SubType>
@@ -83,17 +72,35 @@
     <Compile Include="GUI\KHO\QL_Kho.Designer.cs">
       <DependentUpon>QL_Kho.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KHO\QL_NhaCungCap.cs">
-      <SubType>Form</SubType>
+    <Compile Include="GUI\KHO\UC_KiemKe.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\KHO\QL_NhaCungCap.Designer.cs">
-      <DependentUpon>QL_NhaCungCap.cs</DependentUpon>
+    <Compile Include="GUI\KHO\UC_KiemKe.Designer.cs">
+      <DependentUpon>UC_KiemKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KHO\QL_NhanVien.cs">
-      <SubType>Form</SubType>
+    <Compile Include="GUI\KHO\UC_NCC.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\KHO\QL_NhanVien.Designer.cs">
-      <DependentUpon>QL_NhanVien.cs</DependentUpon>
+    <Compile Include="GUI\KHO\UC_NCC.Designer.cs">
+      <DependentUpon>UC_NCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KHO\UC_NhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KHO\UC_NhanVien.Designer.cs">
+      <DependentUpon>UC_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KHO\UC_PhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KHO\UC_PhieuNhap.Designer.cs">
+      <DependentUpon>UC_PhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KHO\UC_PhieuXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KHO\UC_PhieuXuat.Designer.cs">
+      <DependentUpon>UC_PhieuXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\MainForm\Form1.cs">
       <SubType>Form</SubType>
@@ -108,34 +115,43 @@
       <DependentUpon>QL_MuonTra.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\SACH\Class1.cs" />
+    <Compile Include="GUI\SACH\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SACH\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\DOCGIA\QL_DocGia.resx">
       <DependentUpon>QL_DocGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KHO\PhieuKiemKe_Kho.resx">
-      <DependentUpon>PhieuKiemKe_Kho.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KHO\PhieuNhap_Kho.resx">
-      <DependentUpon>PhieuNhap_Kho.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KHO\PhieuXuat_Kho.resx">
-      <DependentUpon>PhieuXuat_Kho.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\KHO\QL_Kho.resx">
       <DependentUpon>QL_Kho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KHO\QL_NhaCungCap.resx">
-      <DependentUpon>QL_NhaCungCap.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\KHO\UC_KiemKe.resx">
+      <DependentUpon>UC_KiemKe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KHO\QL_NhanVien.resx">
-      <DependentUpon>QL_NhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\KHO\UC_NCC.resx">
+      <DependentUpon>UC_NCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KHO\UC_NhanVien.resx">
+      <DependentUpon>UC_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KHO\UC_PhieuNhap.resx">
+      <DependentUpon>UC_PhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KHO\UC_PhieuXuat.resx">
+      <DependentUpon>UC_PhieuXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainForm\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MUONTRA\QL_MuonTra.resx">
       <DependentUpon>QL_MuonTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SACH\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -161,6 +177,24 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GUI\KHO\Images\administrator-24.png" />
+    <Content Include="GUI\KHO\Images\available-updates-24.png" />
+    <Content Include="GUI\KHO\Images\cart-20-24.png" />
+    <Content Include="GUI\KHO\Images\check-24.png" />
+    <Content Include="GUI\KHO\Images\checkout-32.png" />
+    <Content Include="GUI\KHO\Images\conference-24.png" />
+    <Content Include="GUI\KHO\Images\delete-24.png" />
+    <Content Include="GUI\KHO\Images\edit-9-24.png" />
+    <Content Include="GUI\KHO\Images\KH.png" />
+    <Content Include="GUI\KHO\Images\nhapkho.png" />
+    <Content Include="GUI\KHO\Images\organization-24.png" />
+    <Content Include="GUI\KHO\Images\quy-trinh-kiem-ke-hang-ton-kho.jpg" />
+    <Content Include="GUI\KHO\Images\reseller.jpg" />
+    <Content Include="GUI\KHO\Images\search-16-24.png" />
+    <Content Include="GUI\KHO\Images\xuatkho.png" />
+    <Content Include="GUI\KHO\Images\xuatkho2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

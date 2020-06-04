@@ -20,18 +20,18 @@ namespace QLTV.DAL
 
         private DocGia_DAL() { }
 
-        public List<DocGia> GetDocGiaByCategoryID(int id)
+        public List<ViPham> GetListViPham()
         {
-            List<DocGia> list = new List<DocGia>();
+            List<ViPham> list = new List<ViPham>();
 
-            string query = "select * from DocGia where idCategory = " + id;
+            string query = "select * from DOCGIAVP_VIEW";
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             foreach (DataRow item in data.Rows)
             {
-                DocGia docgia = new DocGia(item);
-                list.Add(docgia);
+                ViPham viPham = new ViPham(item);
+                list.Add(viPham);
             }
 
             return list;
@@ -41,7 +41,7 @@ namespace QLTV.DAL
         {
             List<DocGia> list = new List<DocGia>();
 
-            string query = "select * from DocGia";
+            string query = "select * from DOCGIA_VIEW";
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -59,7 +59,7 @@ namespace QLTV.DAL
 
             List<DocGia> list = new List<DocGia>();
 
-            string query = string.Format("SELECT * FROM dbo.DocGia WHERE dbo.fuConvertToUnsign1(name) LIKE N'%' + dbo.fuConvertToUnsign1(N'{0}') + '%'", name);
+            string query = string.Format($"EXEC TimDG '',N'{name}','1'");
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -77,7 +77,7 @@ namespace QLTV.DAL
 
             List<DocGia> list = new List<DocGia>();
 
-            string query = string.Format("SELECT * FROM dbo.DocGia WHERE dbo.fuConvertToUnsign1(name) LIKE N'%' + dbo.fuConvertToUnsign1(N'{0}') + '%'", id);
+            string query = string.Format($"EXEC TimDG '{id}','','0'");
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -92,7 +92,7 @@ namespace QLTV.DAL
 
         public bool InsertDocGia(string name, int id, float price)
         {
-            string query = string.Format("INSERT dbo.DocGia ( name, idCategory, price )VALUES  ( N'{0}', {1}, {2})", name, id, price);
+            string query = string.Format($"");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
@@ -100,7 +100,7 @@ namespace QLTV.DAL
 
         public bool UpdateDocGia(int idDocGia, string name, int id, float price)
         {
-            string query = string.Format("UPDATE dbo.DocGia SET name = N'{0}', idCategory = {1}, price = {2} WHERE id = {3}", name, id, price, idDocGia);
+            string query = string.Format($"");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
@@ -111,10 +111,73 @@ namespace QLTV.DAL
             // delete DocGia -> delete TheThuVien -> delete 1 đống?
             //BillInfoDAO.Instance.DeleteBillInfoByDocGiaID(idDocGia);
 
-            string query = string.Format("Delete DocGia where id = {0}", idDocGia);
+            string query = string.Format($"EXEC XoaDG '{idDocGia}'");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
+        }
+
+        public bool InsertViPham(string tenVP, string ghiChu, int maThe)
+        {
+            string query = string.Format($"EXEC ThemVP [{tenVP}], [{ghiChu}], '{maThe}'");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        public bool UpdateViPham(int idViPham, string tenVP, string ghiChu, int maThe)
+        {
+            string query = string.Format($"EXEC SuaVP '{idViPham}',[{tenVP}], [{ghiChu}], '{maThe}'");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        public bool DeleteViPham(int idViPham)
+        {
+            // delete ViPham -> delete TheThuVien -> delete 1 đống?
+            //BillInfoDAO.Instance.DeleteBillInfoByViPhamID(idViPham);
+
+            string query = string.Format($"EXEC XoaVP '{idViPham}'");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        public List<ViPham> SearchViPhamByName(string name)
+        {
+
+            List<ViPham> list = new List<ViPham>();
+
+            string query = string.Format($"EXEC TimVP '',[{name}],'1'");
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                ViPham viPham = new ViPham(item);
+                list.Add(viPham);
+            }
+
+            return list;
+        }
+
+        public List<ViPham> SearchViPhamByID(int id)
+        {
+
+            List<ViPham> list = new List<ViPham>();
+
+            string query = string.Format($"EXEC TimVP '{id}','','0'");
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                ViPham viPham = new ViPham(item);
+                list.Add(viPham);
+            }
+
+            return list;
         }
     }
 }
