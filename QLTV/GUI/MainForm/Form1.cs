@@ -31,8 +31,8 @@ namespace QLTV.GUI.MainForm
 
         private void btn_QL_MuonTra_Click(object sender, EventArgs e)
         {
-            MUONTRA.Quản_Lý_Mượn_Trả ql = new MUONTRA.Quản_Lý_Mượn_Trả();
-            ql.ShowDialog();
+            MUONTRA.QL_MuonTra ql_MuonTra = new MUONTRA.QL_MuonTra();
+            ql_MuonTra.ShowDialog();
         }
 
         private void btn_QL_Kho_Click(object sender, EventArgs e)
