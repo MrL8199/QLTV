@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLTV.DAL;
 
 namespace QLTV.GUI.KHO
 {
@@ -15,6 +16,11 @@ namespace QLTV.GUI.KHO
         public UC_KiemKe()
         {
             InitializeComponent();
+        }
+
+        private void UC_KiemKe_Load(object sender, EventArgs e)
+        {
+            dtgvKiemKe.DataSource = KHO_DAL.Instance.GetListPhieuKiemKe();
         }
     }
 }

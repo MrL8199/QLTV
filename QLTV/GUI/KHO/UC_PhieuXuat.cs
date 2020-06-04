@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using QLTV.DAL;
 
 namespace QLTV.GUI.KHO
 {
@@ -17,9 +19,9 @@ namespace QLTV.GUI.KHO
             InitializeComponent();
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+        private void UC_PhieuXuat_Load(object sender, EventArgs e)
         {
-
+            dtgvPhieuXuat.DataSource = KHO_DAL.Instance.GetListPhieuXuat();
         }
     }
 }

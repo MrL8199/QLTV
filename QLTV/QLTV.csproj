@@ -55,6 +55,7 @@
     <Compile Include="BUS\DocGiaBUS.cs" />
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\DocGia_DAL.cs" />
+    <Compile Include="DAL\KHO_DAL.cs" />
     <Compile Include="DTO\DocGia.cs" />
     <Compile Include="DTO\Kho.cs" />
     <Compile Include="DTO\ViPham.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="GUI\DOCGIA\QL_DocGia.Designer.cs">
       <DependentUpon>QL_DocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\KHO\Kho_MainClass.cs" />
     <Compile Include="GUI\KHO\QL_Kho.cs">
       <SubType>Form</SubType>
     </Compile>

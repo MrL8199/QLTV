@@ -34,7 +34,7 @@ namespace QLTV.DAL
                 SqlCommand command = new SqlCommand(query, conn);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
-
+                data.Clear();
                 adapter.Fill(data);
 
                 conn.Close();
