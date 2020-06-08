@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gb_thongtin = new System.Windows.Forms.GroupBox();
             this.dtpk_dob = new System.Windows.Forms.DateTimePicker();
             this.dtpk_expire = new System.Windows.Forms.DateTimePicker();
@@ -114,6 +115,8 @@
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addViPhamListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gb_thongtin.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_docgia)).BeginInit();
@@ -129,6 +132,7 @@
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_thongke)).BeginInit();
             this.groupBox7.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_thongtin
@@ -319,8 +323,8 @@
             this.dtgv_docgia.Size = new System.Drawing.Size(770, 230);
             this.dtgv_docgia.TabIndex = 0;
             this.dtgv_docgia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_docgia_CellClick);
+            this.dtgv_docgia.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgv_docgia_CellMouseDown);
             this.dtgv_docgia.Click += new System.EventHandler(this.dtgv_docgia_Click);
-            this.dtgv_docgia.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgv_docgia_MouseClick);
             // 
             // maThe
             // 
@@ -1049,6 +1053,20 @@
             this.label13.TabIndex = 1;
             this.label13.Text = "Thống kê theo:";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addViPhamListToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(230, 26);
+            // 
+            // addViPhamListToolStripMenuItem
+            // 
+            this.addViPhamListToolStripMenuItem.Name = "addViPhamListToolStripMenuItem";
+            this.addViPhamListToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.addViPhamListToolStripMenuItem.Text = "Thêm vào danh sách vi phạm";
+            this.addViPhamListToolStripMenuItem.Click += new System.EventHandler(this.addViPhamListToolStripMenuItem_Click);
+            // 
             // QL_DocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1080,6 +1098,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_thongke)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1172,5 +1191,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDG;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem addViPhamListToolStripMenuItem;
     }
 }

@@ -15,6 +15,8 @@ namespace QLTV.GUI.DOCGIA
     {
         private int themMoi = 0;
 
+        private int tempID = 0;
+
         public QL_DocGia()
         {
             InitializeComponent();
@@ -196,25 +198,20 @@ namespace QLTV.GUI.DOCGIA
             tbMaVP.Text = dtgv_docgia.CurrentRow.Cells["MaThe"].Value.ToString();
         }
 
-        private void dtgv_docgia_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                ContextMenu m = new ContextMenu();
-                m.MenuItems.Add(new MenuItem("Cut"));
-                m.MenuItems.Add(new MenuItem("Copy"));
-                m.MenuItems.Add(new MenuItem("Paste"));
+        //private void dtgv_docgia_MouseClick(object sender, MouseEventArgs e)
+        //{
+        //    if (e.Button == MouseButtons.Right)
+        //    {
 
-                int currentMouseOverRow = dtgv_docgia.HitTest(e.X, e.Y).RowIndex;
+        //        int currentMouseOverRow = dtgv_docgia.HitTest(e.X, e.Y).RowIndex;
 
-                if (currentMouseOverRow >= 0)
-                {
-                    m.MenuItems.Add(new MenuItem(string.Format("Do something to row {0}", currentMouseOverRow.ToString())));
-                }
+        //        DataGridViewCell c = (sender as DataGridView)[e.X, e.Y];
 
-                m.Show(dtgv_docgia, new Point(e.X, e.Y));
-            }
-        }
+        //        dtgv_docgia.CurrentCell = c;
+
+        //        contextMenuStrip1.Show(dtgv_docgia, new Point(e.X, e.Y));
+        //    }
+        //}
 
         private void tbKeywordDG_TextChanged(object sender, EventArgs e)
         {
@@ -406,9 +403,26 @@ namespace QLTV.GUI.DOCGIA
             dtpk_expire.Value = dtpk_expire.Value.AddYears(2);
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void addViPhamListToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            tbMaTheVP.Text = dtgv_docgia.CurrentRow.Cells["MaThe"].Value.ToString();
+            tabControl1.SelectedIndex = (tabControl1.SelectedIndex + 1 < tabControl1.TabCount) ?
+                             tabControl1.SelectedIndex + 1 : tabControl1.SelectedIndex;
+            btnThemVP_Click(sender, e);
+        }
 
+        private void dtgv_docgia_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                DataGridViewCell clickedCell = (sender as DataGridView).Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+                dtgv_docgia.CurrentCell = clickedCell;
+
+                Rectangle r = clickedCell.DataGridView.GetCellDisplayRectangle(clickedCell.ColumnIndex, clickedCell.RowIndex, false);
+                
+                contextMenuStrip1.Show(dtgv_docgia, new Point(r.X + r.Width, r.Y + r.Height));
+            }
         }
     }
 }
