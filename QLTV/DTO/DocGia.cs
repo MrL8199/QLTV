@@ -17,7 +17,6 @@ namespace QLTV.DTO
         private string lop;
         private string trangThai;
         private DateTime ngayHetHan;
-        private int soLanGiaHan;
 
         public int MaThe { get => maThe; set => maThe = value; }
         public string TenDG { get => tenDG; set => tenDG = value; }
@@ -27,7 +26,6 @@ namespace QLTV.DTO
         public string Lop { get => lop; set => lop = value; }
         public string TrangThai { get => trangThai; set => trangThai = value; }
         public DateTime NgayHetHan { get => ngayHetHan; set => ngayHetHan = value; }
-        public int SoLanGiaHan { get => soLanGiaHan; set => soLanGiaHan = value; }
 
         public DocGia()
         {
@@ -36,13 +34,12 @@ namespace QLTV.DTO
         public DocGia(DataRow row)
         {
             this.MaThe = (int)row["MaThe"];
-            this.TenDG = (string)row["TenDG"];
+            this.TenDG = (string)row["HoTenDocGia"];
             this.Lop = (string)row["Lop"];
             this.Sdt = (int)row["Sdt"];
             this.DiaChi = (string)row["DiaChi"];
             this.NgaySinh = (DateTime)row["NgaySinh"];
             this.TrangThai = (string)row["TrangThai"];
-            this.SoLanGiaHan = (int)row["SoLanGiaHan"];
             this.NgayHetHan = (DateTime)row["NgayHetHan"];
         }
 
@@ -55,8 +52,6 @@ namespace QLTV.DTO
             Sdt = sdt;
             Lop = lop;
             TrangThai = trangThai;
-            NgayHetHan = ngayHetHan;
-            SoLanGiaHan = soLanGiaHan;
         }
     }
 }
