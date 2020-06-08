@@ -56,9 +56,11 @@
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\DocGia_DAL.cs" />
     <Compile Include="DAL\MuonTra_DAL.cs" />
+    <Compile Include="DAL\Sach_DAL.cs" />
     <Compile Include="DTO\DocGia.cs" />
     <Compile Include="DTO\Kho.cs" />
     <Compile Include="DTO\MuonTra.cs" />
+    <Compile Include="DTO\Sach.cs" />
     <Compile Include="DTO\ViPham.cs" />
     <Compile Include="GUI\DOCGIA\QL_DocGia.cs">
       <SubType>Form</SubType>

@@ -21,7 +21,7 @@ namespace QLTV.DAL
         private DataProvider() { }
 
 
-        private string str = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyThuVien_MTA;Integrated Security=True";
+        private string str = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyThuVien;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query)
         {

@@ -93,6 +93,12 @@
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.maTheVP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoTenVP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaySinhDGVP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lopDGVP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenVP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -106,12 +112,6 @@
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
-            this.maTheVP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoTenVP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaySinhDGVP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lopDGVP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenVP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ghiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -483,6 +483,7 @@
             this.button6.TabIndex = 2;
             this.button6.Text = "Làm mới";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -820,6 +821,45 @@
             this.dataGridView2.Size = new System.Drawing.Size(770, 230);
             this.dataGridView2.TabIndex = 0;
             // 
+            // maTheVP
+            // 
+            this.maTheVP.HeaderText = "Mã thẻ";
+            this.maTheVP.Name = "maTheVP";
+            this.maTheVP.ReadOnly = true;
+            // 
+            // hoTenVP
+            // 
+            this.hoTenVP.HeaderText = "Họ và tên";
+            this.hoTenVP.Name = "hoTenVP";
+            this.hoTenVP.ReadOnly = true;
+            this.hoTenVP.Width = 150;
+            // 
+            // ngaySinhDGVP
+            // 
+            this.ngaySinhDGVP.HeaderText = "Ngày sinh";
+            this.ngaySinhDGVP.Name = "ngaySinhDGVP";
+            this.ngaySinhDGVP.ReadOnly = true;
+            // 
+            // lopDGVP
+            // 
+            this.lopDGVP.HeaderText = "Lớp";
+            this.lopDGVP.Name = "lopDGVP";
+            this.lopDGVP.ReadOnly = true;
+            this.lopDGVP.Width = 90;
+            // 
+            // tenVP
+            // 
+            this.tenVP.HeaderText = "Vi phạm";
+            this.tenVP.Name = "tenVP";
+            this.tenVP.ReadOnly = true;
+            this.tenVP.Width = 200;
+            // 
+            // ghiChu
+            // 
+            this.ghiChu.HeaderText = "Ghi chú";
+            this.ghiChu.Name = "ghiChu";
+            this.ghiChu.ReadOnly = true;
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.groupBox8);
@@ -945,45 +985,6 @@
             this.label13.Size = new System.Drawing.Size(95, 17);
             this.label13.TabIndex = 1;
             this.label13.Text = "Thống kê theo:";
-            // 
-            // maTheVP
-            // 
-            this.maTheVP.HeaderText = "Mã thẻ";
-            this.maTheVP.Name = "maTheVP";
-            this.maTheVP.ReadOnly = true;
-            // 
-            // hoTenVP
-            // 
-            this.hoTenVP.HeaderText = "Họ và tên";
-            this.hoTenVP.Name = "hoTenVP";
-            this.hoTenVP.ReadOnly = true;
-            this.hoTenVP.Width = 150;
-            // 
-            // ngaySinhDGVP
-            // 
-            this.ngaySinhDGVP.HeaderText = "Ngày sinh";
-            this.ngaySinhDGVP.Name = "ngaySinhDGVP";
-            this.ngaySinhDGVP.ReadOnly = true;
-            // 
-            // lopDGVP
-            // 
-            this.lopDGVP.HeaderText = "Lớp";
-            this.lopDGVP.Name = "lopDGVP";
-            this.lopDGVP.ReadOnly = true;
-            this.lopDGVP.Width = 90;
-            // 
-            // tenVP
-            // 
-            this.tenVP.HeaderText = "Vi phạm";
-            this.tenVP.Name = "tenVP";
-            this.tenVP.ReadOnly = true;
-            this.tenVP.Width = 200;
-            // 
-            // ghiChu
-            // 
-            this.ghiChu.HeaderText = "Ghi chú";
-            this.ghiChu.Name = "ghiChu";
-            this.ghiChu.ReadOnly = true;
             // 
             // QL_DocGia
             // 
