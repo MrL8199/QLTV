@@ -42,12 +42,12 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbNgayHanTra1 = new System.Windows.Forms.DateTimePicker();
+            this.tbNgayMuon1 = new System.Windows.Forms.DateTimePicker();
+            this.tbTenSach1 = new System.Windows.Forms.TextBox();
+            this.tbCuonSach1 = new System.Windows.Forms.TextBox();
+            this.tbNhanVien1 = new System.Windows.Forms.TextBox();
+            this.tbMaThe1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -67,11 +67,11 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.tbNgayTra2 = new System.Windows.Forms.DateTimePicker();
+            this.tbTenSach2 = new System.Windows.Forms.TextBox();
+            this.tbCuonSach2 = new System.Windows.Forms.TextBox();
+            this.tbNhanVien2 = new System.Windows.Forms.TextBox();
+            this.tbMaThe2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -149,6 +149,8 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1178, 247);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button4
             // 
@@ -241,12 +243,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbNgayHanTra1);
+            this.groupBox1.Controls.Add(this.tbNgayMuon1);
+            this.groupBox1.Controls.Add(this.tbTenSach1);
+            this.groupBox1.Controls.Add(this.tbCuonSach1);
+            this.groupBox1.Controls.Add(this.tbNhanVien1);
+            this.groupBox1.Controls.Add(this.tbMaThe1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -260,58 +262,59 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mượn sách";
             // 
-            // dateTimePicker2
+            // tbNgayHanTra1
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(180, 122);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(156, 22);
-            this.dateTimePicker2.TabIndex = 11;
+            this.tbNgayHanTra1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.tbNgayHanTra1.Location = new System.Drawing.Point(180, 122);
+            this.tbNgayHanTra1.Name = "tbNgayHanTra1";
+            this.tbNgayHanTra1.Size = new System.Drawing.Size(156, 22);
+            this.tbNgayHanTra1.TabIndex = 11;
             // 
-            // dateTimePicker1
+            // tbNgayMuon1
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(180, 86);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(156, 22);
-            this.dateTimePicker1.TabIndex = 10;
+            this.tbNgayMuon1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.tbNgayMuon1.Location = new System.Drawing.Point(180, 86);
+            this.tbNgayMuon1.Name = "tbNgayMuon1";
+            this.tbNgayMuon1.Size = new System.Drawing.Size(156, 22);
+            this.tbNgayMuon1.TabIndex = 10;
+            this.tbNgayMuon1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // textBox4
+            // tbTenSach1
             // 
-            this.textBox4.Location = new System.Drawing.Point(559, 83);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(181, 22);
-            this.textBox4.TabIndex = 9;
+            this.tbTenSach1.Location = new System.Drawing.Point(559, 83);
+            this.tbTenSach1.Name = "tbTenSach1";
+            this.tbTenSach1.Size = new System.Drawing.Size(181, 22);
+            this.tbTenSach1.TabIndex = 9;
             // 
-            // textBox3
+            // tbCuonSach1
             // 
-            this.textBox3.Location = new System.Drawing.Point(559, 40);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(181, 22);
-            this.textBox3.TabIndex = 8;
+            this.tbCuonSach1.Location = new System.Drawing.Point(559, 40);
+            this.tbCuonSach1.Name = "tbCuonSach1";
+            this.tbCuonSach1.Size = new System.Drawing.Size(181, 22);
+            this.tbCuonSach1.TabIndex = 8;
             // 
-            // textBox2
+            // tbNhanVien1
             // 
-            this.textBox2.Location = new System.Drawing.Point(180, 163);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 22);
-            this.textBox2.TabIndex = 7;
+            this.tbNhanVien1.Location = new System.Drawing.Point(180, 163);
+            this.tbNhanVien1.Name = "tbNhanVien1";
+            this.tbNhanVien1.Size = new System.Drawing.Size(156, 22);
+            this.tbNhanVien1.TabIndex = 7;
             // 
-            // textBox1
+            // tbMaThe1
             // 
-            this.textBox1.Location = new System.Drawing.Point(180, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 22);
-            this.textBox1.TabIndex = 6;
+            this.tbMaThe1.Location = new System.Drawing.Point(180, 40);
+            this.tbMaThe1.Name = "tbMaThe1";
+            this.tbMaThe1.Size = new System.Drawing.Size(156, 22);
+            this.tbMaThe1.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(435, 86);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 17);
+            this.label6.Size = new System.Drawing.Size(73, 17);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Mã Nhân Viên:";
+            this.label6.Text = "Tên Sách:";
             // 
             // label5
             // 
@@ -327,9 +330,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(38, 166);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 17);
+            this.label4.Size = new System.Drawing.Size(101, 17);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Mã Thẻ:";
+            this.label4.Text = "Mã Nhân Viên:";
             // 
             // label3
             // 
@@ -354,9 +357,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(38, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 17);
+            this.label1.Size = new System.Drawing.Size(60, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mã Phiếu Mượn:";
+            this.label1.Text = "Mã Thẻ:";
             // 
             // tabPage2
             // 
@@ -387,12 +390,14 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(0, 21);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(1178, 247);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // button5
@@ -485,11 +490,11 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.dateTimePicker4);
-            this.groupBox5.Controls.Add(this.textBox7);
-            this.groupBox5.Controls.Add(this.textBox8);
-            this.groupBox5.Controls.Add(this.textBox9);
-            this.groupBox5.Controls.Add(this.textBox10);
+            this.groupBox5.Controls.Add(this.tbNgayTra2);
+            this.groupBox5.Controls.Add(this.tbTenSach2);
+            this.groupBox5.Controls.Add(this.tbCuonSach2);
+            this.groupBox5.Controls.Add(this.tbNhanVien2);
+            this.groupBox5.Controls.Add(this.tbMaThe2);
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.label11);
@@ -502,50 +507,50 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Trả sách";
             // 
-            // dateTimePicker4
+            // tbNgayTra2
             // 
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker4.Location = new System.Drawing.Point(180, 86);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(156, 22);
-            this.dateTimePicker4.TabIndex = 10;
+            this.tbNgayTra2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.tbNgayTra2.Location = new System.Drawing.Point(180, 86);
+            this.tbNgayTra2.Name = "tbNgayTra2";
+            this.tbNgayTra2.Size = new System.Drawing.Size(156, 22);
+            this.tbNgayTra2.TabIndex = 10;
             // 
-            // textBox7
+            // tbTenSach2
             // 
-            this.textBox7.Location = new System.Drawing.Point(559, 83);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(181, 22);
-            this.textBox7.TabIndex = 9;
+            this.tbTenSach2.Location = new System.Drawing.Point(559, 83);
+            this.tbTenSach2.Name = "tbTenSach2";
+            this.tbTenSach2.Size = new System.Drawing.Size(181, 22);
+            this.tbTenSach2.TabIndex = 9;
             // 
-            // textBox8
+            // tbCuonSach2
             // 
-            this.textBox8.Location = new System.Drawing.Point(559, 40);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(181, 22);
-            this.textBox8.TabIndex = 8;
+            this.tbCuonSach2.Location = new System.Drawing.Point(559, 40);
+            this.tbCuonSach2.Name = "tbCuonSach2";
+            this.tbCuonSach2.Size = new System.Drawing.Size(181, 22);
+            this.tbCuonSach2.TabIndex = 8;
             // 
-            // textBox9
+            // tbNhanVien2
             // 
-            this.textBox9.Location = new System.Drawing.Point(180, 135);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(156, 22);
-            this.textBox9.TabIndex = 7;
+            this.tbNhanVien2.Location = new System.Drawing.Point(180, 135);
+            this.tbNhanVien2.Name = "tbNhanVien2";
+            this.tbNhanVien2.Size = new System.Drawing.Size(156, 22);
+            this.tbNhanVien2.TabIndex = 7;
             // 
-            // textBox10
+            // tbMaThe2
             // 
-            this.textBox10.Location = new System.Drawing.Point(180, 40);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(156, 22);
-            this.textBox10.TabIndex = 6;
+            this.tbMaThe2.Location = new System.Drawing.Point(180, 40);
+            this.tbMaThe2.Name = "tbMaThe2";
+            this.tbMaThe2.Size = new System.Drawing.Size(156, 22);
+            this.tbMaThe2.TabIndex = 6;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(435, 86);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(101, 17);
+            this.label9.Size = new System.Drawing.Size(73, 17);
             this.label9.TabIndex = 5;
-            this.label9.Text = "Mã Nhân Viên:";
+            this.label9.Text = "Tên Sách:";
             // 
             // label10
             // 
@@ -561,27 +566,28 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(38, 135);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 17);
+            this.label11.Size = new System.Drawing.Size(101, 17);
             this.label11.TabIndex = 3;
-            this.label11.Text = "Mã Thẻ:";
+            this.label11.Text = "Mã Nhân Viên:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(38, 86);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(84, 17);
+            this.label13.Size = new System.Drawing.Size(71, 17);
             this.label13.TabIndex = 1;
-            this.label13.Text = "Ngày Mượn:";
+            this.label13.Text = "Ngày Trả:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(38, 43);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(97, 17);
+            this.label14.Size = new System.Drawing.Size(60, 17);
             this.label14.TabIndex = 0;
-            this.label14.Text = "Mã Phiếu Trả:";
+            this.label14.Text = "Mã Thẻ:";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // tabPage3
             // 
@@ -677,6 +683,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "QL_MuonTra";
             this.Text = "QL_MuonTra";
+            this.Load += new System.EventHandler(this.QL_MuonTra_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -719,12 +726,12 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker tbNgayHanTra1;
+        private System.Windows.Forms.DateTimePicker tbNgayMuon1;
+        private System.Windows.Forms.TextBox tbTenSach1;
+        private System.Windows.Forms.TextBox tbCuonSach1;
+        private System.Windows.Forms.TextBox tbNhanVien1;
+        private System.Windows.Forms.TextBox tbMaThe1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -743,11 +750,11 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.DateTimePicker tbNgayTra2;
+        private System.Windows.Forms.TextBox tbTenSach2;
+        private System.Windows.Forms.TextBox tbCuonSach2;
+        private System.Windows.Forms.TextBox tbNhanVien2;
+        private System.Windows.Forms.TextBox tbMaThe2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;

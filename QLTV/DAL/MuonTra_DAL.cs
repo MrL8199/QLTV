@@ -23,72 +23,46 @@ namespace QLTV.DAL
         {
         }
         // Dưới đây là các chức năng conn DB
-        public List<PhieuMuon> GetPhieuMuonByCategoryID(int id)
+        // Truy vấn
+       
+        public List<PhieuMuon>GetListPhieuMuon()
         {
             List<PhieuMuon> list = new List<PhieuMuon>();
 
-            string query = "select * from PhieuMuon where idCategory = " + id;
+            string query = "EXEC SelectAllPhieuMuon;";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach( DataRow item in data.Rows)
+            {
+                PhieuMuon phieumuon = new PhieuMuon(item);
+                list.Add(phieumuon);
+            }
+            return list;
+;        }
+        // -- PhieuTra
+        public List<PhieuTra> GetListPhieuTra()
+        {
+            List<PhieuTra> list = new List<PhieuTra>();
+
+            string query = "EXE";
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             foreach (DataRow item in data.Rows)
             {
-                PhieuMuon phieumuon = new PhieuMuon(item);
-                list.Add(phieumuon);
+                PhieuTra phieutra = new PhieuTra(item);
+                list.Add(phieutra);
             }
-             
             return list;
+            ;
         }
+        //Phi truy vấn
 
-        public List<PhieuMuon> GetListPhieuMuon()
-        {
-            List<PhieuMuon> list = new List<PhieuMuon>();
 
-            string query = "select * from PhieuMuon";
 
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
-            foreach (DataRow item in data.Rows)
-            {
-                PhieuMuon phieumuon = new PhieuMuon(item);
-                list.Add(phieumuon);
-            }
 
-            return list;
-        }
-
-        public List<PhieuMuon> SearchPhieuMuonById(int id)
-        {
-
-            List<PhieuMuon> list = new List<PhieuMuon>();
-
-            string query = string.Format("SELECT * FROM dbo.PhieuMuon WHERE dbo.fuConvertToUnsign1(id) LIKE N'%' + dbo.fuConvertToUnsign1(N'{0}') + '%'", id);
-
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-
-            foreach (DataRow item in data.Rows)
-            {
-                PhieuMuon phieumuon = new PhieuMuon(item);
-                list.Add(phieumuon);
-            }
-
-            return list;
-        }
-        public bool InsertPhieuMuon(int idPhieuMuon, DateTime ngayMuon, DateTime NgayHanTra, int idThe)
-        {
-            string query = string.Format("INSERT dbo.PhieuMuon ( idPhieuMuon, ngayMuon, NgayHanTra,idThe  )VALUES  ( N'{0}', {1}, {2}, {3})", idPhieuMuon, ngayMuon, NgayHanTra, idThe);
-            int result = DataProvider.Instance.ExecuteNonQuery(query);
-
-            return result > 0;
-        }
-
-        public bool UpdatePhieuMuon(int idPhieuMuon, DateTime ngayMuon, DateTime ngayHanTra, int idThe)
-        {
-            string query = string.Format("UPDATE dbo.PhieuMuon SET idPhieuMuon = N'{0}', ngayMuon = {1}, ngayHanTra = {2} WHERE idThe = {3}", idPhieuMuon, ngayMuon, ngayHanTra, idThe);
-            int result = DataProvider.Instance.ExecuteNonQuery(query);
-
-            return result > 0;
-        }
 
     }
 }
