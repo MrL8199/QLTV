@@ -29,7 +29,7 @@ namespace QLTV.DAL
         {
             List<PhieuMuon> list = new List<PhieuMuon>();
 
-            string query = "EXEC SelectAllPhieuMuon;";
+            string query = "select * from PhieuMuon_View";
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -45,7 +45,7 @@ namespace QLTV.DAL
         {
             List<PhieuTra> list = new List<PhieuTra>();
 
-            string query = "EXE";
+            string query = "select * from PhieuTra_View";
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -58,7 +58,13 @@ namespace QLTV.DAL
             ;
         }
         //Phi truy vấn
+        public bool UpdatePhieuMuon(int maPhieuMuon, int maThe, DateTime ngayMuon, DateTime ngayHanTra, int maCuonSach, int maNhanVien)
+        {
+            string query = string.Format($"EXEC SuaDG '{maPhieuMuon}', N'{maThe}', [{ngayMuon}], '{ngayHanTra}','{maCuonSach}', '{maNhanVien}',");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
 
+            return result > 0;
+        }
 
 
 

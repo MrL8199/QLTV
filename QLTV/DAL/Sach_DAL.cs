@@ -181,6 +181,25 @@ namespace QLTV.DAL
 
             return list;
         }
+        // Hưng thay tạm
+        public List<Sach> SearchSachByID1(int id)
+        {
+
+            List<Sach> list = new List<Sach>();
+
+            string query = string.Format($"EXEC TimKiemCS '{id}'");
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Sach cuonsach = new Sach(item);
+                list.Add(cuonsach);
+            }
+
+            return list;
+        }
+
         public List<Sach> SearchSachByName(string name)
         {
 
