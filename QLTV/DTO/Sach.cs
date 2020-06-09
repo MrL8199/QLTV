@@ -44,6 +44,12 @@ namespace QLTV.DTO
         public Sach(DataRow row)
         {
 
+            this.MaCuonSach = (int)row["MaCuonSach"];
+            this.TenSach = (string)row["TenSach"];
+            this.TinhTrangCuonSach = (string)row["TinhTrangCuonSach"];
+            this.SoTrang = (int)row["SoTrang"];
+            this.MaDauSach = (int)row["MaDauSach"];
+            this.MaKeSach = (int)row["MaKeSach"];
             MaCuonSach = (int)row["maCuonSach"];
             TenSach = (string)row["tenSach"];
             TinhTrangCuonSach = (string)row["tinhtrangCuonSach"];

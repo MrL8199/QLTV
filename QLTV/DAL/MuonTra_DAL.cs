@@ -24,7 +24,7 @@ namespace QLTV.DAL
         }
         // Dưới đây là các chức năng conn DB
         // Truy vấn
-       
+       //-- PhieuMuon
         public List<PhieuMuon>GetListPhieuMuon()
         {
             List<PhieuMuon> list = new List<PhieuMuon>();
@@ -57,18 +57,90 @@ namespace QLTV.DAL
             return list;
             ;
         }
-        //Phi truy vấn
-        public bool UpdatePhieuMuon(int maPhieuMuon, int maThe, DateTime ngayMuon, DateTime ngayHanTra, int maCuonSach, int maNhanVien)
+        //--Tìm kiếm Phiếu Mượn
+        // By Ma The
+        public List<PhieuMuon> SearchPhieuMuonByTheID(int id)
         {
-            string query = string.Format($"EXEC SuaDG '{maPhieuMuon}', N'{maThe}', [{ngayMuon}], '{ngayHanTra}','{maCuonSach}', '{maNhanVien}',");
+
+            List<PhieuMuon> list = new List<PhieuMuon>();
+
+            string query = string.Format($"EXEC TimPhieuMuon '{id}','','0'");
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                PhieuMuon phieumuon = new PhieuMuon(item);
+                list.Add(phieumuon);
+            }
+
+            return list;
+        }
+        // By Ngay Muon
+        public List<PhieuMuon> SearchPhieuMuonByNgayMuon(DateTime ngaymuon)
+        {
+
+            List<PhieuMuon> list = new List<PhieuMuon>();
+
+            string query = string.Format($"EXEC TimPhieuMuon '','{ngaymuon}','1'");
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                PhieuMuon phieumuon = new PhieuMuon(item);
+                list.Add(phieumuon);
+            }
+
+            return list;
+        }
+        //Phi truy vấn
+        public bool UpdatePhieuMuon(int maPhieuMuon, int maThe, DateTime ngayMuon, DateTime ngayHanTra, int maCuonSach, int maNhanVien, int maCuonSachNew)
+        {
+            string query = string.Format($"EXEC SuaPhieuMuon '{maPhieuMuon}','{ngayMuon}', '{ngayHanTra}','{maThe}', '{maCuonSach}', '{maNhanVien}', {maCuonSachNew}");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
         }
 
+        public bool InsertPhieuMuon(int maThe, DateTime ngayMuon, DateTime ngayHanTra, int maCuonSach, int maNhanVien)
+        {
+            string query = string.Format($"EXEC ThemPhieuMuon '{ngayMuon}', '{ngayHanTra}','{maThe}', '{maCuonSach}', '{maNhanVien}'");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
 
+            return result > 0;
+        }
 
+        public bool DeletePhieuMuon(int maPhieuMuon)
+        {
+            string query = string.Format($"EXEC XoaPhieuMuon {maPhieuMuon}");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
 
+            return result > 0;
+        }
 
+        public bool UpdatePhieuTra(int maPhieuTra, int maThe, DateTime ngayTra,int maCuonSach, int maNhanVien, int maCuonSachNew)
+        {
+            string query = string.Format($"EXEC SuaPhieuTra '{maPhieuTra}', '{ngayTra}','{maThe}', '{maCuonSach}', '{maNhanVien}', '{maCuonSachNew}'");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        public bool InsertPhieuTra(int maThe, DateTime ngayTra, int maCuonSach, int maNhanVien)
+        {
+            string query = string.Format($"EXEC ThemPhieuTra '{ngayTra}','{maThe}', '{maCuonSach}', '{maNhanVien}'");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        public bool DeletePhieuTra(int maPhieuTra)
+        {
+            string query = string.Format($"EXEC XoaPhieuTra {maPhieuTra}");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
     }
 }

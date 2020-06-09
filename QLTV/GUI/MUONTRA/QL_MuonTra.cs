@@ -57,6 +57,14 @@ namespace QLTV.GUI.MUONTRA
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = MuonTra_DAL.Instance.GetListPhieuMuon();
+            DAL.MuonTra_DAL.Instance.InsertPhieuMuon(
+                Convert.ToInt32(tbMaThe1.Text),
+                tbNgayMuon1.Value,
+                tbNgayHanTra1.Value,
+                Convert.ToInt32(tbCuonSach1.Text),
+                Convert.ToInt32(tbNhanVien1.Text)
+               );
+            dataGridView1.DataSource = DAL.DataProvider.Instance.ExecuteQuery("select * from PhieuMuon_View");
         }
 
 
@@ -127,7 +135,7 @@ namespace QLTV.GUI.MUONTRA
 
         private void tbTTCuonSach2_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(tbTTCuonSach1.Text))
+            if (string.IsNullOrEmpty(tbTTCuonSach2.Text))
             {
                 return;
             }
@@ -150,6 +158,60 @@ namespace QLTV.GUI.MUONTRA
                 tbMaDauSach2.Text = "";
                 tbMaKeSach2.Text = "";
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DAL.MuonTra_DAL.Instance.UpdatePhieuMuon(
+                Convert.ToInt32(dataGridView1.CurrentRow.Cells["Mã Phiếu Mượn"].Value.ToString()),
+                Convert.ToInt32(tbMaThe1.Text),
+                tbNgayMuon1.Value,
+                tbNgayHanTra1.Value,
+                Convert.ToInt32(dataGridView1.CurrentRow.Cells["Mã Cuốn Sách"].Value.ToString()),
+                Convert.ToInt32(tbNhanVien1.Text),
+                Convert.ToInt32(tbCuonSach1.Text)
+               );
+            dataGridView1.DataSource = DAL.DataProvider.Instance.ExecuteQuery("select * from PhieuMuon_View");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DAL.MuonTra_DAL.Instance.DeletePhieuMuon(
+                Convert.ToInt32(dataGridView1.CurrentRow.Cells["Mã Phiếu Mượn"].Value.ToString())
+               );
+            dataGridView1.DataSource = DAL.DataProvider.Instance.ExecuteQuery("select * from PhieuMuon_View");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DAL.MuonTra_DAL.Instance.InsertPhieuTra(
+                Convert.ToInt32(tbMaThe2.Text),
+               tbNgayTra2.Value,
+               Convert.ToInt32(tbCuonSach2.Text),
+               Convert.ToInt32(tbNhanVien2.Text)
+               );
+            dataGridView2.DataSource = DAL.DataProvider.Instance.ExecuteQuery("select * from PhieuTra_View");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            DAL.MuonTra_DAL.Instance.UpdatePhieuTra(
+               Convert.ToInt32(dataGridView2.CurrentRow.Cells["Mã Phiếu Trả"].Value.ToString()),
+               Convert.ToInt32(tbMaThe2.Text),
+               tbNgayTra2.Value,
+               Convert.ToInt32(dataGridView2.CurrentRow.Cells["Mã Cuốn Sách"].Value.ToString()),
+               Convert.ToInt32(tbNhanVien2.Text),
+               Convert.ToInt32(tbCuonSach2.Text)
+              );
+            dataGridView2.DataSource = DAL.DataProvider.Instance.ExecuteQuery("select * from PhieuTra_View");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DAL.MuonTra_DAL.Instance.DeletePhieuTra(
+               Convert.ToInt32(dataGridView2.CurrentRow.Cells["Mã Phiếu Trả"].Value.ToString())
+              );
+            dataGridView2.DataSource = DAL.DataProvider.Instance.ExecuteQuery("select * from PhieuTra_View");
         }
     }
 }

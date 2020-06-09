@@ -132,7 +132,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 4);
+            this.tabControl1.Location = new System.Drawing.Point(-12, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1192, 607);
@@ -313,6 +313,7 @@
             this.button3.TabIndex = 11;
             this.button3.Text = "Xóa";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -322,6 +323,7 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "Sửa";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -663,6 +665,7 @@
             this.button6.TabIndex = 11;
             this.button6.Text = "Xóa";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -672,6 +675,7 @@
             this.button7.TabIndex = 10;
             this.button7.Text = "Sửa";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -681,6 +685,7 @@
             this.button8.TabIndex = 9;
             this.button8.Text = "Trả";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // groupBox4
             // 
