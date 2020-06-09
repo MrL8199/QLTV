@@ -90,17 +90,17 @@ namespace QLTV.DAL
             return list;
         }
 
-        public bool InsertDocGia(string name, int id, float price)
+        public bool InsertDocGia(string ten, string diaChi, string Lop, int sdt, string ngaySinh, string ngayHetHan)
         {
-            string query = string.Format($"");
+            string query = string.Format($"EXEC ThemDG N'{ten}', [{diaChi}], '{Lop}','{sdt}', '{ngaySinh}','{ngayHetHan}'");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
         }
 
-        public bool UpdateDocGia(int idDocGia, string name, int id, float price)
+        public bool UpdateDocGia(int maThe, string ten, string diaChi, string Lop, int sdt, string ngaySinh, string ngayHetHan)
         {
-            string query = string.Format($"");
+            string query = string.Format($"EXEC SuaDG '{maThe}', N'{ten}', [{diaChi}], '{Lop}','{sdt}', '{ngaySinh}','{ngayHetHan}'");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
@@ -178,6 +178,24 @@ namespace QLTV.DAL
             }
 
             return list;
+        }
+
+        public DataTable ThongKeViPham()
+        {
+            string query = "select * from ThongKeVP_VIEW";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            return data;
+        }
+
+        public DataTable ThongKeSachMuonDG()
+        {
+            string query = "select * from ThongKeSachMuonDG_VIEW";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            return data;
         }
     }
 }

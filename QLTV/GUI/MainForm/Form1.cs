@@ -20,7 +20,8 @@ namespace QLTV.GUI.MainForm
 
         private void btn_QL_Sach_Click(object sender, EventArgs e)
         {
-            
+            SACH.Form1 ql_Sach = new SACH.Form1();
+            ql_Sach.ShowDialog();
         }
 
         private void btn_QL_DocGia_Click(object sender, EventArgs e)
