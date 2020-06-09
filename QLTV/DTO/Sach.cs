@@ -43,21 +43,18 @@ namespace QLTV.DTO
 
         public Sach(DataRow row)
         {
-<<<<<<< HEAD
             this.MaCuonSach = (int)row["MaCuonSach"];
             this.TenSach = (string)row["TenSach"];
             this.TinhTrangCuonSach = (string)row["TinhTrangCuonSach"];
             this.SoTrang = (int)row["SoTrang"];
             this.MaDauSach = (int)row["MaDauSach"];
             this.MaKeSach = (int)row["MaKeSach"];
-=======
             MaCuonSach = (int)row["maCuonSach"];
             TenSach = (string)row["tenSach"];
             TinhTrangCuonSach = (string)row["tinhtrangCuonSach"];
             SoTrang = (int)row["soTrang"];
             MaDauSach = (int)row["maDauSach"];
             MaKeSach = (int)row["maKeSach"];
->>>>>>> 0d3f5827c79801f7d32660da0b34605afc951365
         }
     }
     public class TacGia
