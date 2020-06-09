@@ -17,7 +17,7 @@ namespace QLTV.DTO
         private int soTrang;
         private int maDauSach;
         private int maKeSach;
-        private DataRow item;
+        
 
         public int MaCuonSach { get => maCuonSach; set => maCuonSach = value; }
         public string TenSach { get => tenSach; set => tenSach = value; }
@@ -43,19 +43,27 @@ namespace QLTV.DTO
 
         public Sach(DataRow row)
         {
+<<<<<<< HEAD
             this.MaCuonSach = (int)row["MaCuonSach"];
             this.TenSach = (string)row["TenSach"];
             this.TinhTrangCuonSach = (string)row["TinhTrangCuonSach"];
             this.SoTrang = (int)row["SoTrang"];
             this.MaDauSach = (int)row["MaDauSach"];
             this.MaKeSach = (int)row["MaKeSach"];
+=======
+            MaCuonSach = (int)row["maCuonSach"];
+            TenSach = (string)row["tenSach"];
+            TinhTrangCuonSach = (string)row["tinhtrangCuonSach"];
+            SoTrang = (int)row["soTrang"];
+            MaDauSach = (int)row["maDauSach"];
+            MaKeSach = (int)row["maKeSach"];
+>>>>>>> 0d3f5827c79801f7d32660da0b34605afc951365
         }
     }
     public class TacGia
     {
         private int maTacGia;
         private string tenTacGia;
-        private DataRow item;
 
         public int MaTacGia { get => maTacGia; set => maTacGia = value; }
         public string TenTacGia { get => tenTacGia; set => tenTacGia = value; }
@@ -68,16 +76,17 @@ namespace QLTV.DTO
             TenTacGia = tenTacGia;
         }
 
-        public TacGia(DataRow item)
+        public TacGia(DataRow row)
         {
-            this.item = item;
+            MaTacGia = (int)row["maTacGia"];
+            TenTacGia = (string)row["tenTacGia"];
         }
     }
     public class TheLoai
     {
         private int maKeSach;
         private string tenTheLoai;
-        private DataRow item;
+        
 
         public int MaKeSach { get => maKeSach; set => maKeSach = value; }
         public string TenTheLoai { get => tenTheLoai; set => tenTheLoai = value; }
@@ -92,9 +101,10 @@ namespace QLTV.DTO
             TenTheLoai = tenTheLoai;
         }
 
-        public TheLoai(DataRow item)
+        public TheLoai(DataRow row)
         {
-            this.item = item;
+            MaKeSach = (int)row["maKeSach"];
+            TenTheLoai = (string)row["tenTheLoai"];
         }
     }
     public class NXB
@@ -103,7 +113,7 @@ namespace QLTV.DTO
         private string tenNXB;
         private string diachiNXB;
         private int sdt;
-        private DataRow item;
+        
 
         public int MaNXB { get => maNXB; set => maNXB = value; }
         public string TenNXB { get => tenNXB; set => tenNXB = value; }
@@ -122,9 +132,12 @@ namespace QLTV.DTO
             SDT = sdt;
         }
 
-        public NXB(DataRow item)
+        public NXB(DataRow row)
         {
-            this.item = item;
+            MaNXB = (int)row["maNXB"];
+            TenNXB = (string)row["tenNXB"];
+            DiaChiNXB = (string)row["diachiNXB"];
+            SDT = (int)row["SDT_NXB"];
         }
     }
     public class DauSach
@@ -132,7 +145,7 @@ namespace QLTV.DTO
         private int maDauSach;
         private string tenDauSach;
         private int maNXB;
-        private DataRow item;
+        
 
         public int MaDauSach { get => maDauSach; set => maDauSach = value; }
         public string TenDauSach { get => tenDauSach; set => tenDauSach = value; }
@@ -148,9 +161,11 @@ namespace QLTV.DTO
             MaNXB = maNXB;
         }
 
-        public DauSach(DataRow item)
+        public DauSach(DataRow row)
         {
-            this.item = item;
+            MaDauSach = (int)row["maDauSach"];
+            TenDauSach = (string)row["tenDauSach"];
+            MaNXB = (int)row["maNXB"];
         }
     }
 }

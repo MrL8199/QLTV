@@ -101,7 +101,7 @@ namespace QLTV.DAL
 
             List<TacGia> list = new List<TacGia>();
 
-            string query = string.Format($"EXEC TimKiemTG1 '{id}'");
+            string query = string.Format($"SELECT * FROM TimKiemTG1('{id}')");
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -118,7 +118,7 @@ namespace QLTV.DAL
 
             List<TacGia> list = new List<TacGia>();
 
-            string query = string.Format($"EXEC TimKiemTG2 'N'{name}'");
+            string query = string.Format($"SELECT * FROM TimKiemTG2(N'{name}')");
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -135,7 +135,7 @@ namespace QLTV.DAL
 
             List<NXB> list = new List<NXB>();
 
-            string query = string.Format($"EXEC TimKiemNXB1 '{id}'");
+            string query = string.Format($"SELECT * FROM TimKiemNXB1('{id}')");
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -152,7 +152,7 @@ namespace QLTV.DAL
 
             List<NXB> list = new List<NXB>();
 
-            string query = string.Format($"EXEC TimKiemNXB2 N'{name}'");
+            string query = string.Format($"SELECT * FROM TimKiemNXB2(N'{name}')");
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -169,7 +169,7 @@ namespace QLTV.DAL
 
             List<Sach> list = new List<Sach>();
 
-            string query = string.Format($"EXEC TimKiemCS1 '{id}'");
+            string query = string.Format($"SELECT * FROM TimKiemCS1('{id}')");
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -205,7 +205,7 @@ namespace QLTV.DAL
 
             List<Sach> list = new List<Sach>();
 
-            string query = string.Format($"EXEC TimKiemCS2 N'{name}'");
+            string query = string.Format($"SELECT * FROM TimKiemCS2(N'{name}')");
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -222,7 +222,7 @@ namespace QLTV.DAL
 
             List<DauSach> list = new List<DauSach>();
 
-            string query = string.Format($"EXEC TimKiemDS1 '{id}'");
+            string query = string.Format($"SELECT * FROM TimKiemDS1('{id}')");
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -239,7 +239,7 @@ namespace QLTV.DAL
 
             List<DauSach> list = new List<DauSach>();
 
-            string query = string.Format($"EXEC TimKiemDS2 N'{name}'");
+            string query = string.Format($"SELECT * FROM TimKiemDS2(N'{name}')");
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -256,7 +256,7 @@ namespace QLTV.DAL
 
             List<TheLoai> list = new List<TheLoai>();
 
-            string query = string.Format($"EXEC TimKiemTheLoai N'{name}'");
+            string query = string.Format($"SELECT * FROM TimKiemTheLoai(N'{name}')");
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
