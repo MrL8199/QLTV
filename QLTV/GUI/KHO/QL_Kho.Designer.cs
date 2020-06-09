@@ -84,7 +84,7 @@
             this.bunifuCircleProgressbar2.ProgressColor = System.Drawing.Color.Red;
             this.bunifuCircleProgressbar2.Size = new System.Drawing.Size(71, 71);
             this.bunifuCircleProgressbar2.TabIndex = 1;
-            this.bunifuCircleProgressbar2.Value = 47;
+            this.bunifuCircleProgressbar2.Value = 99;
             // 
             // bunifuFlatButton6
             // 

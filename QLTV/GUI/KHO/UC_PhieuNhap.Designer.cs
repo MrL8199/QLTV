@@ -29,40 +29,43 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_PhieuNhap));
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.checkNgay = new System.Windows.Forms.RadioButton();
+            this.checkMaPN = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btnSearch = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnDeleteCTPN = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtMaCTPN = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtMaDauSach = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtMaNCC = new System.Windows.Forms.TextBox();
+            this.txtMaKho = new System.Windows.Forms.TextBox();
+            this.txtMaPN = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dtgvPhieuNhap = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dtgvCTPhieuNhap = new System.Windows.Forms.DataGridView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnHuy = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnUpdateCTPN = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnAddCTPN = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton8 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -71,27 +74,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCTPhieuNhap)).BeginInit();
             this.SuspendLayout();
             // 
-            // radioButton2
+            // checkNgay
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(115, 105);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(90, 21);
-            this.radioButton2.TabIndex = 56;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Ngày nhập";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.checkNgay.AutoSize = true;
+            this.checkNgay.Location = new System.Drawing.Point(115, 105);
+            this.checkNgay.Name = "checkNgay";
+            this.checkNgay.Size = new System.Drawing.Size(90, 21);
+            this.checkNgay.TabIndex = 56;
+            this.checkNgay.TabStop = true;
+            this.checkNgay.Text = "Ngày nhập";
+            this.checkNgay.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // checkMaPN
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(115, 78);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(71, 21);
-            this.radioButton1.TabIndex = 55;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Mã kho";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.checkMaPN.AutoSize = true;
+            this.checkMaPN.Location = new System.Drawing.Point(115, 78);
+            this.checkMaPN.Name = "checkMaPN";
+            this.checkMaPN.Size = new System.Drawing.Size(113, 21);
+            this.checkMaPN.TabIndex = 55;
+            this.checkMaPN.TabStop = true;
+            this.checkMaPN.Text = "Mã phiếu nhập";
+            this.checkMaPN.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -104,12 +107,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.bunifuFlatButton3);
-            this.groupBox1.Controls.Add(this.bunifuFlatButton1);
-            this.groupBox1.Controls.Add(this.bunifuFlatButton2);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.txtTimKiem);
+            this.groupBox1.Controls.Add(this.btnSearch);
+            this.groupBox1.Controls.Add(this.checkNgay);
+            this.groupBox1.Controls.Add(this.checkMaPN);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,117 +121,48 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
             // 
-            // textBox3
+            // txtTimKiem
             // 
-            this.textBox3.Location = new System.Drawing.Point(115, 41);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(203, 25);
-            this.textBox3.TabIndex = 67;
+            this.txtTimKiem.Location = new System.Drawing.Point(115, 41);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(203, 25);
+            this.txtTimKiem.TabIndex = 67;
             // 
-            // bunifuFlatButton3
+            // btnSearch
             // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "Xóa PX";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton3.Iconimage")));
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 30D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(227, 159);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(12);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(91, 31);
-            this.bunifuFlatButton3.TabIndex = 66;
-            this.bunifuFlatButton3.Text = "Xóa PX";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Sửa PX";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 30D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(121, 159);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(9);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(87, 31);
-            this.bunifuFlatButton1.TabIndex = 65;
-            this.bunifuFlatButton1.Text = "Sửa PX";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton2
-            // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "Tìm Kiếm";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 30D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(10, 159);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(7);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(95, 31);
-            this.bunifuFlatButton2.TabIndex = 64;
-            this.bunifuFlatButton2.Text = "Tìm Kiếm";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearch.BorderRadius = 0;
+            this.btnSearch.ButtonText = "Tìm Kiếm";
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSearch.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSearch.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSearch.Iconimage")));
+            this.btnSearch.Iconimage_right = null;
+            this.btnSearch.Iconimage_right_Selected = null;
+            this.btnSearch.Iconimage_Selected = null;
+            this.btnSearch.IconMarginLeft = 0;
+            this.btnSearch.IconMarginRight = 0;
+            this.btnSearch.IconRightVisible = true;
+            this.btnSearch.IconRightZoom = 0D;
+            this.btnSearch.IconVisible = true;
+            this.btnSearch.IconZoom = 30D;
+            this.btnSearch.IsTab = false;
+            this.btnSearch.Location = new System.Drawing.Point(115, 149);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(7);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnSearch.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSearch.selected = false;
+            this.btnSearch.Size = new System.Drawing.Size(203, 31);
+            this.btnSearch.TabIndex = 64;
+            this.btnSearch.Text = "Tìm Kiếm";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Textcolor = System.Drawing.Color.White;
+            this.btnSearch.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label10
             // 
@@ -240,6 +172,42 @@
             this.label10.Size = new System.Drawing.Size(64, 17);
             this.label10.TabIndex = 50;
             this.label10.Text = "Mời nhập";
+            // 
+            // btnDeleteCTPN
+            // 
+            this.btnDeleteCTPN.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnDeleteCTPN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnDeleteCTPN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDeleteCTPN.BorderRadius = 0;
+            this.btnDeleteCTPN.ButtonText = "Xóa PX";
+            this.btnDeleteCTPN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteCTPN.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDeleteCTPN.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDeleteCTPN.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDeleteCTPN.Iconimage")));
+            this.btnDeleteCTPN.Iconimage_right = null;
+            this.btnDeleteCTPN.Iconimage_right_Selected = null;
+            this.btnDeleteCTPN.Iconimage_Selected = null;
+            this.btnDeleteCTPN.IconMarginLeft = 0;
+            this.btnDeleteCTPN.IconMarginRight = 0;
+            this.btnDeleteCTPN.IconRightVisible = true;
+            this.btnDeleteCTPN.IconRightZoom = 0D;
+            this.btnDeleteCTPN.IconVisible = true;
+            this.btnDeleteCTPN.IconZoom = 30D;
+            this.btnDeleteCTPN.IsTab = false;
+            this.btnDeleteCTPN.Location = new System.Drawing.Point(488, 324);
+            this.btnDeleteCTPN.Margin = new System.Windows.Forms.Padding(9);
+            this.btnDeleteCTPN.Name = "btnDeleteCTPN";
+            this.btnDeleteCTPN.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnDeleteCTPN.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnDeleteCTPN.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnDeleteCTPN.selected = false;
+            this.btnDeleteCTPN.Size = new System.Drawing.Size(86, 30);
+            this.btnDeleteCTPN.TabIndex = 66;
+            this.btnDeleteCTPN.Text = "Xóa PX";
+            this.btnDeleteCTPN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteCTPN.Textcolor = System.Drawing.Color.White;
+            this.btnDeleteCTPN.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteCTPN.Click += new System.EventHandler(this.btnDeleteCTPN_Click);
             // 
             // label5
             // 
@@ -251,26 +219,10 @@
             this.label5.TabIndex = 57;
             this.label5.Text = "Phiếu Nhập Kho";
             // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(142, 46);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(150, 25);
-            this.comboBox4.TabIndex = 8;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(142, 161);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(150, 25);
-            this.comboBox2.TabIndex = 6;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 161);
+            this.label6.Location = new System.Drawing.Point(51, 122);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 17);
             this.label6.TabIndex = 5;
@@ -278,63 +230,96 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.comboBox4);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtSoLuong);
+            this.groupBox2.Controls.Add(this.txtMaCTPN);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.txtMaDauSach);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.txtMaNCC);
+            this.groupBox2.Controls.Add(this.txtMaKho);
+            this.groupBox2.Controls.Add(this.txtMaPN);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(71, 106);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(329, 200);
+            this.groupBox2.Size = new System.Drawing.Size(329, 210);
             this.groupBox2.TabIndex = 54;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin nhập hàng";
             // 
+            // txtMaCTPN
+            // 
+            this.txtMaCTPN.Location = new System.Drawing.Point(155, 21);
+            this.txtMaCTPN.Name = "txtMaCTPN";
+            this.txtMaCTPN.Size = new System.Drawing.Size(150, 25);
+            this.txtMaCTPN.TabIndex = 16;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(21, 24);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(120, 17);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "Mã CTPhiếu Nhập";
+            // 
+            // txtMaDauSach
+            // 
+            this.txtMaDauSach.Location = new System.Drawing.Point(155, 181);
+            this.txtMaDauSach.Name = "txtMaDauSach";
+            this.txtMaDauSach.Size = new System.Drawing.Size(150, 25);
+            this.txtMaDauSach.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(51, 187);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 17);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Đầu sách";
+            // 
+            // txtMaNCC
+            // 
+            this.txtMaNCC.Location = new System.Drawing.Point(155, 116);
+            this.txtMaNCC.Name = "txtMaNCC";
+            this.txtMaNCC.Size = new System.Drawing.Size(150, 25);
+            this.txtMaNCC.TabIndex = 12;
+            // 
+            // txtMaKho
+            // 
+            this.txtMaKho.Location = new System.Drawing.Point(155, 85);
+            this.txtMaKho.Name = "txtMaKho";
+            this.txtMaKho.Size = new System.Drawing.Size(150, 25);
+            this.txtMaKho.TabIndex = 11;
+            // 
+            // txtMaPN
+            // 
+            this.txtMaPN.Location = new System.Drawing.Point(155, 54);
+            this.txtMaPN.Name = "txtMaPN";
+            this.txtMaPN.Size = new System.Drawing.Size(150, 25);
+            this.txtMaPN.TabIndex = 10;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(38, 49);
+            this.label11.Location = new System.Drawing.Point(40, 54);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(101, 17);
             this.label11.TabIndex = 9;
             this.label11.Text = "Mã Phiếu Nhập";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(142, 124);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 25);
-            this.comboBox1.TabIndex = 4;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 124);
+            this.label3.Location = new System.Drawing.Point(51, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 1;
             this.label3.Text = "Mã số kho";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Số lượng";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(142, 87);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 25);
-            this.textBox1.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -377,14 +362,15 @@
             this.dtgvCTPhieuNhap.Name = "dtgvCTPhieuNhap";
             this.dtgvCTPhieuNhap.Size = new System.Drawing.Size(327, 156);
             this.dtgvCTPhieuNhap.TabIndex = 0;
+            this.dtgvCTPhieuNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvCTPhieuNhap_CellClick);
             // 
-            // textBox2
+            // txtTenNV
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(182, 547);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 26);
-            this.textBox2.TabIndex = 74;
+            this.txtTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenNV.Location = new System.Drawing.Point(182, 547);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(150, 26);
+            this.txtTenNV.TabIndex = 74;
             // 
             // label8
             // 
@@ -403,15 +389,6 @@
             this.label9.Size = new System.Drawing.Size(40, 13);
             this.label9.TabIndex = 75;
             this.label9.Text = "Mã NV";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(424, 547);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(150, 28);
-            this.comboBox3.TabIndex = 73;
             // 
             // dateTimePicker2
             // 
@@ -467,110 +444,113 @@
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // bunifuFlatButton7
+            // btnHuy
             // 
-            this.bunifuFlatButton7.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton7.BorderRadius = 0;
-            this.bunifuFlatButton7.ButtonText = "Hủy";
-            this.bunifuFlatButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton7.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton7.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton7.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton7.Iconimage")));
-            this.bunifuFlatButton7.Iconimage_right = null;
-            this.bunifuFlatButton7.Iconimage_right_Selected = null;
-            this.bunifuFlatButton7.Iconimage_Selected = null;
-            this.bunifuFlatButton7.IconMarginLeft = 0;
-            this.bunifuFlatButton7.IconMarginRight = 0;
-            this.bunifuFlatButton7.IconRightVisible = true;
-            this.bunifuFlatButton7.IconRightZoom = 0D;
-            this.bunifuFlatButton7.IconVisible = true;
-            this.bunifuFlatButton7.IconZoom = 30D;
-            this.bunifuFlatButton7.IsTab = false;
-            this.bunifuFlatButton7.Location = new System.Drawing.Point(487, 315);
-            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton7.Name = "bunifuFlatButton7";
-            this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton7.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton7.selected = false;
-            this.bunifuFlatButton7.Size = new System.Drawing.Size(98, 30);
-            this.bunifuFlatButton7.TabIndex = 85;
-            this.bunifuFlatButton7.Text = "Hủy";
-            this.bunifuFlatButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton7.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton7.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnHuy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHuy.BorderRadius = 0;
+            this.btnHuy.ButtonText = "Hủy";
+            this.btnHuy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHuy.DisabledColor = System.Drawing.Color.Gray;
+            this.btnHuy.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnHuy.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnHuy.Iconimage")));
+            this.btnHuy.Iconimage_right = null;
+            this.btnHuy.Iconimage_right_Selected = null;
+            this.btnHuy.Iconimage_Selected = null;
+            this.btnHuy.IconMarginLeft = 0;
+            this.btnHuy.IconMarginRight = 0;
+            this.btnHuy.IconRightVisible = true;
+            this.btnHuy.IconRightZoom = 0D;
+            this.btnHuy.IconVisible = true;
+            this.btnHuy.IconZoom = 30D;
+            this.btnHuy.IsTab = false;
+            this.btnHuy.Location = new System.Drawing.Point(703, 317);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(5);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnHuy.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnHuy.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnHuy.selected = false;
+            this.btnHuy.Size = new System.Drawing.Size(98, 30);
+            this.btnHuy.TabIndex = 85;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuy.Textcolor = System.Drawing.Color.White;
+            this.btnHuy.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // bunifuFlatButton6
+            // btnUpdateCTPN
             // 
-            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton6.BorderRadius = 0;
-            this.bunifuFlatButton6.ButtonText = "Cập Nhật";
-            this.bunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton6.Iconimage")));
-            this.bunifuFlatButton6.Iconimage_right = null;
-            this.bunifuFlatButton6.Iconimage_right_Selected = null;
-            this.bunifuFlatButton6.Iconimage_Selected = null;
-            this.bunifuFlatButton6.IconMarginLeft = 0;
-            this.bunifuFlatButton6.IconMarginRight = 0;
-            this.bunifuFlatButton6.IconRightVisible = true;
-            this.bunifuFlatButton6.IconRightZoom = 0D;
-            this.bunifuFlatButton6.IconVisible = true;
-            this.bunifuFlatButton6.IconZoom = 30D;
-            this.bunifuFlatButton6.IsTab = false;
-            this.bunifuFlatButton6.Location = new System.Drawing.Point(376, 314);
-            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton6.Name = "bunifuFlatButton6";
-            this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton6.selected = false;
-            this.bunifuFlatButton6.Size = new System.Drawing.Size(98, 30);
-            this.bunifuFlatButton6.TabIndex = 84;
-            this.bunifuFlatButton6.Text = "Cập Nhật";
-            this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton6.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateCTPN.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnUpdateCTPN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnUpdateCTPN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUpdateCTPN.BorderRadius = 0;
+            this.btnUpdateCTPN.ButtonText = "Cập Nhật";
+            this.btnUpdateCTPN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdateCTPN.DisabledColor = System.Drawing.Color.Gray;
+            this.btnUpdateCTPN.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnUpdateCTPN.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnUpdateCTPN.Iconimage")));
+            this.btnUpdateCTPN.Iconimage_right = null;
+            this.btnUpdateCTPN.Iconimage_right_Selected = null;
+            this.btnUpdateCTPN.Iconimage_Selected = null;
+            this.btnUpdateCTPN.IconMarginLeft = 0;
+            this.btnUpdateCTPN.IconMarginRight = 0;
+            this.btnUpdateCTPN.IconRightVisible = true;
+            this.btnUpdateCTPN.IconRightZoom = 0D;
+            this.btnUpdateCTPN.IconVisible = true;
+            this.btnUpdateCTPN.IconZoom = 30D;
+            this.btnUpdateCTPN.IsTab = false;
+            this.btnUpdateCTPN.Location = new System.Drawing.Point(376, 324);
+            this.btnUpdateCTPN.Margin = new System.Windows.Forms.Padding(5);
+            this.btnUpdateCTPN.Name = "btnUpdateCTPN";
+            this.btnUpdateCTPN.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnUpdateCTPN.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnUpdateCTPN.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnUpdateCTPN.selected = false;
+            this.btnUpdateCTPN.Size = new System.Drawing.Size(98, 30);
+            this.btnUpdateCTPN.TabIndex = 84;
+            this.btnUpdateCTPN.Text = "Cập Nhật";
+            this.btnUpdateCTPN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateCTPN.Textcolor = System.Drawing.Color.White;
+            this.btnUpdateCTPN.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateCTPN.Click += new System.EventHandler(this.btnUpdateCTPN_Click);
             // 
-            // bunifuFlatButton5
+            // btnAddCTPN
             // 
-            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton5.BorderRadius = 0;
-            this.bunifuFlatButton5.ButtonText = "Thêm Mới";
-            this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton5.Iconimage")));
-            this.bunifuFlatButton5.Iconimage_right = null;
-            this.bunifuFlatButton5.Iconimage_right_Selected = null;
-            this.bunifuFlatButton5.Iconimage_Selected = null;
-            this.bunifuFlatButton5.IconMarginLeft = 0;
-            this.bunifuFlatButton5.IconMarginRight = 0;
-            this.bunifuFlatButton5.IconRightVisible = true;
-            this.bunifuFlatButton5.IconRightZoom = 0D;
-            this.bunifuFlatButton5.IconVisible = true;
-            this.bunifuFlatButton5.IconZoom = 30D;
-            this.bunifuFlatButton5.IsTab = false;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(262, 314);
-            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton5.Name = "bunifuFlatButton5";
-            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(98, 30);
-            this.bunifuFlatButton5.TabIndex = 83;
-            this.bunifuFlatButton5.Text = "Thêm Mới";
-            this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton5.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCTPN.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnAddCTPN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnAddCTPN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddCTPN.BorderRadius = 0;
+            this.btnAddCTPN.ButtonText = "Thêm Mới";
+            this.btnAddCTPN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddCTPN.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAddCTPN.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAddCTPN.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAddCTPN.Iconimage")));
+            this.btnAddCTPN.Iconimage_right = null;
+            this.btnAddCTPN.Iconimage_right_Selected = null;
+            this.btnAddCTPN.Iconimage_Selected = null;
+            this.btnAddCTPN.IconMarginLeft = 0;
+            this.btnAddCTPN.IconMarginRight = 0;
+            this.btnAddCTPN.IconRightVisible = true;
+            this.btnAddCTPN.IconRightZoom = 0D;
+            this.btnAddCTPN.IconVisible = true;
+            this.btnAddCTPN.IconZoom = 30D;
+            this.btnAddCTPN.IsTab = false;
+            this.btnAddCTPN.Location = new System.Drawing.Point(262, 324);
+            this.btnAddCTPN.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAddCTPN.Name = "btnAddCTPN";
+            this.btnAddCTPN.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnAddCTPN.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnAddCTPN.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAddCTPN.selected = false;
+            this.btnAddCTPN.Size = new System.Drawing.Size(98, 30);
+            this.btnAddCTPN.TabIndex = 83;
+            this.btnAddCTPN.Text = "Thêm Mới";
+            this.btnAddCTPN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddCTPN.Textcolor = System.Drawing.Color.White;
+            this.btnAddCTPN.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCTPN.Click += new System.EventHandler(this.btnAddCTPN_Click);
             // 
             // bunifuFlatButton8
             // 
@@ -607,21 +587,46 @@
             this.bunifuFlatButton8.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton8.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // txtMaNV
+            // 
+            this.txtMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNV.Location = new System.Drawing.Point(424, 547);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(150, 26);
+            this.txtMaNV.TabIndex = 87;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(51, 157);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 17);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Số lượng";
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Location = new System.Drawing.Point(155, 149);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(150, 25);
+            this.txtSoLuong.TabIndex = 17;
+            // 
             // UC_PhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtMaNV);
+            this.Controls.Add(this.btnDeleteCTPN);
             this.Controls.Add(this.bunifuFlatButton8);
-            this.Controls.Add(this.bunifuFlatButton7);
-            this.Controls.Add(this.bunifuFlatButton6);
-            this.Controls.Add(this.bunifuFlatButton5);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnUpdateCTPN);
+            this.Controls.Add(this.btnAddCTPN);
             this.Controls.Add(this.bunifuFlatButton4);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtTenNV);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
@@ -644,39 +649,42 @@
         }
 
         #endregion
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton checkNgay;
+        private System.Windows.Forms.RadioButton checkMaPN;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dtgvPhieuNhap;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dtgvCTPhieuNhap;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton7;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnHuy;
+        private Bunifu.Framework.UI.BunifuFlatButton btnUpdateCTPN;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAddCTPN;
+        private Bunifu.Framework.UI.BunifuFlatButton btnDeleteCTPN;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSearch;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.TextBox txtMaNCC;
+        private System.Windows.Forms.TextBox txtMaKho;
+        private System.Windows.Forms.TextBox txtMaPN;
+        private System.Windows.Forms.TextBox txtMaNV;
+        private System.Windows.Forms.TextBox txtMaDauSach;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtMaCTPN;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtSoLuong;
     }
 }

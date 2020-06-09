@@ -33,25 +33,26 @@
             this.dtgvKiemKe = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.txtMaPhieuKK = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtMaKho = new System.Windows.Forms.TextBox();
+            this.dtNgayKK = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btnSearch = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.checkNgay = new System.Windows.Forms.RadioButton();
+            this.checkMa = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
+            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnAddPKK = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton8 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvKiemKe)).BeginInit();
@@ -72,12 +73,14 @@
             // 
             // dtgvKiemKe
             // 
+            this.dtgvKiemKe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvKiemKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvKiemKe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvKiemKe.Location = new System.Drawing.Point(3, 21);
             this.dtgvKiemKe.Name = "dtgvKiemKe";
             this.dtgvKiemKe.Size = new System.Drawing.Size(676, 139);
             this.dtgvKiemKe.TabIndex = 0;
+            this.dtgvKiemKe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvKiemKe_CellClick);
             // 
             // label1
             // 
@@ -91,8 +94,10 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
+            this.groupBox2.Controls.Add(this.txtMaPhieuKK);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.txtMaKho);
+            this.groupBox2.Controls.Add(this.dtNgayKK);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -102,27 +107,43 @@
             this.groupBox2.TabIndex = 58;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin kiểm kê";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // comboBox1
+            // txtMaPhieuKK
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(145, 38);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 25);
-            this.comboBox1.TabIndex = 4;
+            this.txtMaPhieuKK.Location = new System.Drawing.Point(146, 59);
+            this.txtMaPhieuKK.Name = "txtMaPhieuKK";
+            this.txtMaPhieuKK.Size = new System.Drawing.Size(150, 25);
+            this.txtMaPhieuKK.TabIndex = 73;
             // 
-            // dateTimePicker2
+            // label2
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(145, 90);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(150, 25);
-            this.dateTimePicker2.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(42, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 17);
+            this.label2.TabIndex = 72;
+            this.label2.Text = "Mã Phiếu KK";
+            // 
+            // txtMaKho
+            // 
+            this.txtMaKho.Location = new System.Drawing.Point(146, 90);
+            this.txtMaKho.Name = "txtMaKho";
+            this.txtMaKho.Size = new System.Drawing.Size(150, 25);
+            this.txtMaKho.TabIndex = 71;
+            // 
+            // dtNgayKK
+            // 
+            this.dtNgayKK.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtNgayKK.Location = new System.Drawing.Point(146, 121);
+            this.dtNgayKK.Name = "dtNgayKK";
+            this.dtNgayKK.Size = new System.Drawing.Size(150, 25);
+            this.dtNgayKK.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 93);
+            this.label4.Location = new System.Drawing.Point(42, 124);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 17);
             this.label4.TabIndex = 1;
@@ -131,7 +152,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 41);
+            this.label3.Location = new System.Drawing.Point(42, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 1;
@@ -148,11 +169,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.bunifuFlatButton3);
-            this.groupBox1.Controls.Add(this.bunifuFlatButton2);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.txtTimKiem);
+            this.groupBox1.Controls.Add(this.btnSearch);
+            this.groupBox1.Controls.Add(this.checkNgay);
+            this.groupBox1.Controls.Add(this.checkMa);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -163,12 +183,79 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
             // 
-            // textBox1
+            // txtTimKiem
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 25);
-            this.textBox1.TabIndex = 70;
+            this.txtTimKiem.Location = new System.Drawing.Point(109, 42);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(177, 25);
+            this.txtTimKiem.TabIndex = 70;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearch.BorderRadius = 0;
+            this.btnSearch.ButtonText = "Tìm Kiếm";
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSearch.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSearch.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSearch.Iconimage")));
+            this.btnSearch.Iconimage_right = null;
+            this.btnSearch.Iconimage_right_Selected = null;
+            this.btnSearch.Iconimage_Selected = null;
+            this.btnSearch.IconMarginLeft = 0;
+            this.btnSearch.IconMarginRight = 0;
+            this.btnSearch.IconRightVisible = true;
+            this.btnSearch.IconRightZoom = 0D;
+            this.btnSearch.IconVisible = true;
+            this.btnSearch.IconZoom = 30D;
+            this.btnSearch.IsTab = false;
+            this.btnSearch.Location = new System.Drawing.Point(109, 146);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(9);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnSearch.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSearch.selected = false;
+            this.btnSearch.Size = new System.Drawing.Size(177, 29);
+            this.btnSearch.TabIndex = 67;
+            this.btnSearch.Text = "Tìm Kiếm";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Textcolor = System.Drawing.Color.White;
+            this.btnSearch.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // checkNgay
+            // 
+            this.checkNgay.AutoSize = true;
+            this.checkNgay.Location = new System.Drawing.Point(109, 113);
+            this.checkNgay.Name = "checkNgay";
+            this.checkNgay.Size = new System.Drawing.Size(76, 21);
+            this.checkNgay.TabIndex = 56;
+            this.checkNgay.TabStop = true;
+            this.checkNgay.Text = "Ngày kk";
+            this.checkNgay.UseVisualStyleBackColor = true;
+            // 
+            // checkMa
+            // 
+            this.checkMa.AutoSize = true;
+            this.checkMa.Location = new System.Drawing.Point(109, 86);
+            this.checkMa.Name = "checkMa";
+            this.checkMa.Size = new System.Drawing.Size(99, 21);
+            this.checkMa.TabIndex = 55;
+            this.checkMa.TabStop = true;
+            this.checkMa.Text = "Mã phiếu kk";
+            this.checkMa.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(13, 90);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 17);
+            this.label7.TabIndex = 54;
+            this.label7.Text = "Tìm theo:";
             // 
             // bunifuFlatButton3
             // 
@@ -191,85 +278,20 @@
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 30D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(204, 148);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(16);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(382, 274);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(12);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(82, 27);
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(94, 39);
             this.bunifuFlatButton3.TabIndex = 69;
             this.bunifuFlatButton3.Text = "Xóa PKK";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton2
-            // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "Tìm Kiếm";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 30D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(84, 148);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(9);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(89, 27);
-            this.bunifuFlatButton2.TabIndex = 67;
-            this.bunifuFlatButton2.Text = "Tìm Kiếm";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(109, 113);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(76, 21);
-            this.radioButton2.TabIndex = 56;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Ngày kk";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(109, 86);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(99, 21);
-            this.radioButton1.TabIndex = 55;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Mã phiếu kk";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 90);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 17);
-            this.label7.TabIndex = 54;
-            this.label7.Text = "Tìm theo:";
+            this.bunifuFlatButton3.Click += new System.EventHandler(this.btnDeletePKK_Click);
             // 
             // label9
             // 
@@ -327,89 +349,56 @@
             this.bunifuFlatButton7.IconVisible = true;
             this.bunifuFlatButton7.IconZoom = 30D;
             this.bunifuFlatButton7.IsTab = false;
-            this.bunifuFlatButton7.Location = new System.Drawing.Point(475, 275);
+            this.bunifuFlatButton7.Location = new System.Drawing.Point(513, 274);
             this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton7.Name = "bunifuFlatButton7";
             this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.bunifuFlatButton7.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton7.selected = false;
-            this.bunifuFlatButton7.Size = new System.Drawing.Size(98, 30);
+            this.bunifuFlatButton7.Size = new System.Drawing.Size(100, 39);
             this.bunifuFlatButton7.TabIndex = 85;
             this.bunifuFlatButton7.Text = "Hủy";
             this.bunifuFlatButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton7.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton7.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton7.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // bunifuFlatButton6
+            // btnAddPKK
             // 
-            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton6.BorderRadius = 0;
-            this.bunifuFlatButton6.ButtonText = "Cập Nhật";
-            this.bunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton6.Iconimage")));
-            this.bunifuFlatButton6.Iconimage_right = null;
-            this.bunifuFlatButton6.Iconimage_right_Selected = null;
-            this.bunifuFlatButton6.Iconimage_Selected = null;
-            this.bunifuFlatButton6.IconMarginLeft = 0;
-            this.bunifuFlatButton6.IconMarginRight = 0;
-            this.bunifuFlatButton6.IconRightVisible = true;
-            this.bunifuFlatButton6.IconRightZoom = 0D;
-            this.bunifuFlatButton6.IconVisible = true;
-            this.bunifuFlatButton6.IconZoom = 30D;
-            this.bunifuFlatButton6.IsTab = false;
-            this.bunifuFlatButton6.Location = new System.Drawing.Point(364, 274);
-            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton6.Name = "bunifuFlatButton6";
-            this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton6.selected = false;
-            this.bunifuFlatButton6.Size = new System.Drawing.Size(98, 30);
-            this.bunifuFlatButton6.TabIndex = 84;
-            this.bunifuFlatButton6.Text = "Cập Nhật";
-            this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton6.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton5
-            // 
-            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton5.BorderRadius = 0;
-            this.bunifuFlatButton5.ButtonText = "Thêm Mới";
-            this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton5.Iconimage")));
-            this.bunifuFlatButton5.Iconimage_right = null;
-            this.bunifuFlatButton5.Iconimage_right_Selected = null;
-            this.bunifuFlatButton5.Iconimage_Selected = null;
-            this.bunifuFlatButton5.IconMarginLeft = 0;
-            this.bunifuFlatButton5.IconMarginRight = 0;
-            this.bunifuFlatButton5.IconRightVisible = true;
-            this.bunifuFlatButton5.IconRightZoom = 0D;
-            this.bunifuFlatButton5.IconVisible = true;
-            this.bunifuFlatButton5.IconZoom = 30D;
-            this.bunifuFlatButton5.IsTab = false;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(250, 274);
-            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton5.Name = "bunifuFlatButton5";
-            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(98, 30);
-            this.bunifuFlatButton5.TabIndex = 83;
-            this.bunifuFlatButton5.Text = "Thêm Mới";
-            this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton5.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPKK.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnAddPKK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnAddPKK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddPKK.BorderRadius = 0;
+            this.btnAddPKK.ButtonText = "Thêm Mới";
+            this.btnAddPKK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddPKK.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAddPKK.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAddPKK.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAddPKK.Iconimage")));
+            this.btnAddPKK.Iconimage_right = null;
+            this.btnAddPKK.Iconimage_right_Selected = null;
+            this.btnAddPKK.Iconimage_Selected = null;
+            this.btnAddPKK.IconMarginLeft = 0;
+            this.btnAddPKK.IconMarginRight = 0;
+            this.btnAddPKK.IconRightVisible = true;
+            this.btnAddPKK.IconRightZoom = 0D;
+            this.btnAddPKK.IconVisible = true;
+            this.btnAddPKK.IconZoom = 30D;
+            this.btnAddPKK.IsTab = false;
+            this.btnAddPKK.Location = new System.Drawing.Point(250, 274);
+            this.btnAddPKK.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAddPKK.Name = "btnAddPKK";
+            this.btnAddPKK.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnAddPKK.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnAddPKK.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAddPKK.selected = false;
+            this.btnAddPKK.Size = new System.Drawing.Size(115, 39);
+            this.btnAddPKK.TabIndex = 83;
+            this.btnAddPKK.Text = "Thêm Mới";
+            this.btnAddPKK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddPKK.Textcolor = System.Drawing.Color.White;
+            this.btnAddPKK.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPKK.Click += new System.EventHandler(this.btnAddPKK_Click);
             // 
             // bunifuFlatButton8
             // 
@@ -451,9 +440,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.bunifuFlatButton8);
+            this.Controls.Add(this.bunifuFlatButton3);
             this.Controls.Add(this.bunifuFlatButton7);
-            this.Controls.Add(this.bunifuFlatButton6);
-            this.Controls.Add(this.bunifuFlatButton5);
+            this.Controls.Add(this.btnAddPKK);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.comboBox3);
@@ -481,25 +470,26 @@
         private System.Windows.Forms.DataGridView dtgvKiemKe;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtNgayKK;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton checkNgay;
+        private System.Windows.Forms.RadioButton checkMa;
         private System.Windows.Forms.Label label7;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSearch;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label8;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton7;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAddPKK;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.TextBox txtMaKho;
+        private System.Windows.Forms.TextBox txtMaPhieuKK;
+        private System.Windows.Forms.Label label2;
     }
 }

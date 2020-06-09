@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuFlatButton3.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDeleteCTPX.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAAlRJREFUSEudlrFLHUEQxh+S3SKEIA+xDClFxEJEgog8goQQ/EskWIiFVToREZEQ
@@ -134,23 +134,7 @@
         Mf4bmLUxZq3WHc11lWqvYdYyAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuFlatButton1.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAAlBJREFUSEvtlD1Im1EUhkPovYQioUgHJxGRDB2KlA4OpXyIlCIOJQSR4hQkdCgi
-        EkoREURExKGIiIiTFHGQDs7FwakUkVIcioMkSygORaSIOIh93pP7gQGFRKyTBx7uz3nPuX/n+xL39l+s
-        HLl0OfKfYAiSYfp2jORNpch/IfEFHNBPB9fNjCQtJB2n7dRu6X8OycUG+CBtzEiUKkVuhAQL8AJW4Sdz
-        FwL/LuOb7Z4EaVjl+O9J8oBkScYf6JPcdv4bMkHemJHgEcG64xzYA9K+hVNQ8kP4zoJLtE0WVK8pANah
-        pzp2Ok03nIadH0MXeHw6nRbKVse+HU0f6Dr1Xhl4aIljQ6xdg7Mx/eeg61ByXU/BHMHQdTC/CGzKbQfd
-        OTo25P7SLwZp1ZiYBluVgFb6+6DE57RbEJnwCsOnk52hjd9JxbAZ3CZ4DGOhn4IdBEHsZkCl2mziKwxd
-        M/7DaoyqzBbZD25LWsAxAqr1gSAQX+EV9EI3vpchpMbwEed/QRwn/sROleI87bh2AiR1B7DJnOZ1giLt
-        KFxbOfi+1Z7AHccOvbhOoH/LO1gBz/iJCeowtMqzd3kBNlqJnRzd78EPqEAbTgJc3gR1GDF6A8XG1yN2
-        YqfK0yqA9gT0oelvOcXiVJN7Sp93cHnNwSTaN7TPmOtHM89Ym6NEa06wpt3rt5BlgNAf4dBp9MHpYT/C
-        LAyTaJBWuhxwjW6CdpK5PPF8WKo0K81LC7iiXQMDVQgV5F/T2qkaNWL1US7T6uc4ByzuMnKMMVD5pYL2
-        3u7SEol/V0GLYAzI2akAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="bunifuFlatButton2.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSearch.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAAnNJREFUSEutljFIXEEURcPiDCGFiJWEICISQioJViJhSSkiKUQsREJIJSlCqrQp
@@ -184,7 +168,7 @@
         xss4m/0BSzUo9+ilHi8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuFlatButton5.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAddCTPX.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAAoxJREFUSEudlr9O40AQh6NIa6U6UVNQp0BXU6aMIp7iHiPdKc9CyTPkCSIqRAkS
@@ -201,7 +185,7 @@
         xss4m/0BSzUo9+ilHi8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuFlatButton6.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnUpdateCTPX.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAAg5JREFUSEvFlb8rxHEYxy+5b5JkkMFg0o0ySDLdaJJMN8hgukGSJBmUSZJRN+vy
@@ -216,7 +200,7 @@
         UtCEia4rnRcAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuFlatButton7.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnHuy.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAAgVJREFUSEuVlt1qwkAQhb1ZERGfyWsR6duJFyJFSpFS+kj1DUrxWux3ZneSiYlJ
