@@ -63,7 +63,7 @@ namespace QLTV.GUI.KHO
                 dtgvCTPhieuXuat.DataSource = KHO_DAL.Instance.SearchPhieuXuatTheoMaPN(mapx);
             }
             else
-                MessageBox.Show("Mời bạn chọn tìm kiếm theo Mã phiếu hay Ngày Nhập phiếu", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Mời bạn chọn tìm kiếm theo Mã phiếu hay Ngày Xuất phiếu", "Thông báo", MessageBoxButtons.OK);
 
         }
 
@@ -135,6 +135,66 @@ namespace QLTV.GUI.KHO
             dtgvPhieuXuat.DataSource = KHO_DAL.Instance.GetListPhieuXuat();
 
 
+        }
+
+        private void InPX_Click(object sender, EventArgs e)
+        {
+            //  khởi tạo excel
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            // khởi tạo WorkBook
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            // khởi tạo WorkSheet
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            worksheet = workbook.Sheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;
+
+            app.Visible = true;
+
+            // đinh dạng côt
+
+            worksheet.Range["A1"].ColumnWidth = 4;  // STT
+            worksheet.Range["B1"].ColumnWidth = 8;  // mã px
+            worksheet.Range["C1"].ColumnWidth = 20;   // mã ctpx
+            worksheet.Range["D1"].ColumnWidth = 20;   // tên kho
+            worksheet.Range["E1"].ColumnWidth = 8;  // mã kho
+            worksheet.Range["F1"].ColumnWidth = 26;  //  tên ncc
+            worksheet.Range["G1"].ColumnWidth = 8;   // mã ncc
+            worksheet.Range["H1"].ColumnWidth = 10;  // số lượng 
+            worksheet.Range["I1"].ColumnWidth = 26; // tên đầu sách
+            worksheet.Range["J1"].ColumnWidth = 6;  // mã đầu sách
+
+            // đinh dạng  FONT
+            worksheet.Range["A1", "M1"].Font.Size = 18;
+            worksheet.Range["A1", "M1"].MergeCells = true;
+            worksheet.Range["A1", "M5"].Font.Bold = true;
+            // ĐỔ dữ liệu vào Sheet:
+            worksheet.Cells[1, 1] = "BÁO CÁO TỔNG HỢP Xuất KHO";
+            worksheet.Cells[3, 4] = "Nhân Viên : " + txtTenNV.Text;
+            worksheet.Cells[3, 8] = "Mã Nhân Viên: " + txtMaNV.Text;
+
+            worksheet.Cells[8, 1] = "STT";
+            worksheet.Cells[8, 2] = "Mã Phiếu Xuất";
+            worksheet.Cells[8, 3] = "Mã CT Phiếu Xuất";
+            worksheet.Cells[8, 4] = "Tên Kho";
+            worksheet.Cells[8, 5] = "Mã Kho";
+            worksheet.Cells[8, 6] = "Tên kệ sách";
+            worksheet.Cells[8, 7] = "Mã kệ sách";
+            worksheet.Cells[8, 8] = "Số Lượng";
+            worksheet.Cells[8, 9] = "Tên Đầu Sách";
+            worksheet.Cells[8, 10] = "Mã Đầu Sách";
+
+            //int Mapn = Convert.ToInt32(dtgvCTPhieuXuat.CurrentRow.Cells["MaPN"].Value);
+
+            for (int i = 0; i <= dtgvCTPhieuXuat.RowCount - 1; i++)
+            {
+                worksheet.Cells[i + 9, 1] = i + 1;
+                for (int j = 0; j < 9; ++j)
+                {
+
+                    worksheet.Cells[i + 9, j + 2] = dtgvCTPhieuXuat.Rows[i].Cells[j].Value;
+                }
+            }
+            //int index = dtgvCTPhieuNhap.RowCount + 9;
         }
     }
 }

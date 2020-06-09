@@ -35,20 +35,26 @@
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btnDeleteCTPX = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSearch = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnDeleteCTPX = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtgvPhieuXuat = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtMaDauSach = new System.Windows.Forms.TextBox();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
+            this.txtMaKeSach = new System.Windows.Forms.TextBox();
+            this.txtMaKho = new System.Windows.Forms.TextBox();
+            this.txtMaCTPX = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMaPX = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,14 +64,8 @@
             this.dtgvCTPhieuXuat = new System.Windows.Forms.DataGridView();
             this.btnUpdateCTPX = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnHuy = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton8 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.txtMaCTPX = new System.Windows.Forms.TextBox();
-            this.txtMaKho = new System.Windows.Forms.TextBox();
-            this.txtMaKeSach = new System.Windows.Forms.TextBox();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.txtMaDauSach = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.InPX = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPhieuXuat)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -137,42 +137,6 @@
             this.txtTimKiem.Size = new System.Drawing.Size(218, 25);
             this.txtTimKiem.TabIndex = 64;
             // 
-            // btnDeleteCTPX
-            // 
-            this.btnDeleteCTPX.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnDeleteCTPX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnDeleteCTPX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDeleteCTPX.BorderRadius = 0;
-            this.btnDeleteCTPX.ButtonText = "Xóa PX";
-            this.btnDeleteCTPX.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteCTPX.DisabledColor = System.Drawing.Color.Gray;
-            this.btnDeleteCTPX.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnDeleteCTPX.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDeleteCTPX.Iconimage")));
-            this.btnDeleteCTPX.Iconimage_right = null;
-            this.btnDeleteCTPX.Iconimage_right_Selected = null;
-            this.btnDeleteCTPX.Iconimage_Selected = null;
-            this.btnDeleteCTPX.IconMarginLeft = 0;
-            this.btnDeleteCTPX.IconMarginRight = 0;
-            this.btnDeleteCTPX.IconRightVisible = true;
-            this.btnDeleteCTPX.IconRightZoom = 0D;
-            this.btnDeleteCTPX.IconVisible = true;
-            this.btnDeleteCTPX.IconZoom = 30D;
-            this.btnDeleteCTPX.IsTab = false;
-            this.btnDeleteCTPX.Location = new System.Drawing.Point(477, 312);
-            this.btnDeleteCTPX.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.btnDeleteCTPX.Name = "btnDeleteCTPX";
-            this.btnDeleteCTPX.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnDeleteCTPX.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnDeleteCTPX.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnDeleteCTPX.selected = false;
-            this.btnDeleteCTPX.Size = new System.Drawing.Size(85, 30);
-            this.btnDeleteCTPX.TabIndex = 63;
-            this.btnDeleteCTPX.Text = "Xóa PX";
-            this.btnDeleteCTPX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteCTPX.Textcolor = System.Drawing.Color.White;
-            this.btnDeleteCTPX.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteCTPX.Click += new System.EventHandler(this.btnDeleteCTPN_Click);
-            // 
             // btnSearch
             // 
             this.btnSearch.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -208,6 +172,42 @@
             this.btnSearch.Textcolor = System.Drawing.Color.White;
             this.btnSearch.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnDeleteCTPX
+            // 
+            this.btnDeleteCTPX.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnDeleteCTPX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnDeleteCTPX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDeleteCTPX.BorderRadius = 0;
+            this.btnDeleteCTPX.ButtonText = "Xóa PX";
+            this.btnDeleteCTPX.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteCTPX.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDeleteCTPX.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDeleteCTPX.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDeleteCTPX.Iconimage")));
+            this.btnDeleteCTPX.Iconimage_right = null;
+            this.btnDeleteCTPX.Iconimage_right_Selected = null;
+            this.btnDeleteCTPX.Iconimage_Selected = null;
+            this.btnDeleteCTPX.IconMarginLeft = 0;
+            this.btnDeleteCTPX.IconMarginRight = 0;
+            this.btnDeleteCTPX.IconRightVisible = true;
+            this.btnDeleteCTPX.IconRightZoom = 0D;
+            this.btnDeleteCTPX.IconVisible = true;
+            this.btnDeleteCTPX.IconZoom = 30D;
+            this.btnDeleteCTPX.IsTab = false;
+            this.btnDeleteCTPX.Location = new System.Drawing.Point(477, 312);
+            this.btnDeleteCTPX.Margin = new System.Windows.Forms.Padding(7);
+            this.btnDeleteCTPX.Name = "btnDeleteCTPX";
+            this.btnDeleteCTPX.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnDeleteCTPX.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnDeleteCTPX.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnDeleteCTPX.selected = false;
+            this.btnDeleteCTPX.Size = new System.Drawing.Size(85, 30);
+            this.btnDeleteCTPX.TabIndex = 63;
+            this.btnDeleteCTPX.Text = "Xóa PX";
+            this.btnDeleteCTPX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteCTPX.Textcolor = System.Drawing.Color.White;
+            this.btnDeleteCTPX.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteCTPX.Click += new System.EventHandler(this.btnDeleteCTPN_Click);
             // 
             // label6
             // 
@@ -281,6 +281,59 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin xuất hàng";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(27, 177);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(85, 17);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Mã đầu sách";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(37, 146);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 17);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Số lượng";
+            // 
+            // txtMaDauSach
+            // 
+            this.txtMaDauSach.Location = new System.Drawing.Point(143, 174);
+            this.txtMaDauSach.Name = "txtMaDauSach";
+            this.txtMaDauSach.Size = new System.Drawing.Size(150, 25);
+            this.txtMaDauSach.TabIndex = 14;
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Location = new System.Drawing.Point(143, 143);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(150, 25);
+            this.txtSoLuong.TabIndex = 13;
+            // 
+            // txtMaKeSach
+            // 
+            this.txtMaKeSach.Location = new System.Drawing.Point(143, 112);
+            this.txtMaKeSach.Name = "txtMaKeSach";
+            this.txtMaKeSach.Size = new System.Drawing.Size(150, 25);
+            this.txtMaKeSach.TabIndex = 12;
+            // 
+            // txtMaKho
+            // 
+            this.txtMaKho.Location = new System.Drawing.Point(143, 81);
+            this.txtMaKho.Name = "txtMaKho";
+            this.txtMaKho.Size = new System.Drawing.Size(150, 25);
+            this.txtMaKho.TabIndex = 11;
+            // 
+            // txtMaCTPX
+            // 
+            this.txtMaCTPX.Location = new System.Drawing.Point(143, 19);
+            this.txtMaCTPX.Name = "txtMaCTPX";
+            this.txtMaCTPX.Size = new System.Drawing.Size(150, 25);
+            this.txtMaCTPX.TabIndex = 10;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -315,22 +368,13 @@
             this.label9.TabIndex = 74;
             this.label9.Text = "Mã NV";
             // 
-            // textBox2
+            // txtTenNV
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(187, 548);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 26);
-            this.textBox2.TabIndex = 73;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(412, 548);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(150, 28);
-            this.comboBox3.TabIndex = 72;
+            this.txtTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenNV.Location = new System.Drawing.Point(187, 548);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(150, 26);
+            this.txtTenNV.TabIndex = 73;
             // 
             // label8
             // 
@@ -524,99 +568,56 @@
             this.btnHuy.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // bunifuFlatButton8
+            // InPX
             // 
-            this.bunifuFlatButton8.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton8.BorderRadius = 0;
-            this.bunifuFlatButton8.ButtonText = "In PX";
-            this.bunifuFlatButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton8.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton8.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton8.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton8.Iconimage")));
-            this.bunifuFlatButton8.Iconimage_right = null;
-            this.bunifuFlatButton8.Iconimage_right_Selected = null;
-            this.bunifuFlatButton8.Iconimage_Selected = null;
-            this.bunifuFlatButton8.IconMarginLeft = 0;
-            this.bunifuFlatButton8.IconMarginRight = 0;
-            this.bunifuFlatButton8.IconRightVisible = true;
-            this.bunifuFlatButton8.IconRightZoom = 0D;
-            this.bunifuFlatButton8.IconVisible = true;
-            this.bunifuFlatButton8.IconZoom = 30D;
-            this.bunifuFlatButton8.IsTab = false;
-            this.bunifuFlatButton8.Location = new System.Drawing.Point(638, 548);
-            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton8.Name = "bunifuFlatButton8";
-            this.bunifuFlatButton8.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton8.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton8.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton8.selected = false;
-            this.bunifuFlatButton8.Size = new System.Drawing.Size(98, 30);
-            this.bunifuFlatButton8.TabIndex = 83;
-            this.bunifuFlatButton8.Text = "In PX";
-            this.bunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton8.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton8.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InPX.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.InPX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.InPX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InPX.BorderRadius = 0;
+            this.InPX.ButtonText = "In PX";
+            this.InPX.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.InPX.DisabledColor = System.Drawing.Color.Gray;
+            this.InPX.Iconcolor = System.Drawing.Color.Transparent;
+            this.InPX.Iconimage = ((System.Drawing.Image)(resources.GetObject("InPX.Iconimage")));
+            this.InPX.Iconimage_right = null;
+            this.InPX.Iconimage_right_Selected = null;
+            this.InPX.Iconimage_Selected = null;
+            this.InPX.IconMarginLeft = 0;
+            this.InPX.IconMarginRight = 0;
+            this.InPX.IconRightVisible = true;
+            this.InPX.IconRightZoom = 0D;
+            this.InPX.IconVisible = true;
+            this.InPX.IconZoom = 30D;
+            this.InPX.IsTab = false;
+            this.InPX.Location = new System.Drawing.Point(638, 548);
+            this.InPX.Margin = new System.Windows.Forms.Padding(5);
+            this.InPX.Name = "InPX";
+            this.InPX.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.InPX.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.InPX.OnHoverTextColor = System.Drawing.Color.White;
+            this.InPX.selected = false;
+            this.InPX.Size = new System.Drawing.Size(98, 30);
+            this.InPX.TabIndex = 83;
+            this.InPX.Text = "In PX";
+            this.InPX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.InPX.Textcolor = System.Drawing.Color.White;
+            this.InPX.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InPX.Click += new System.EventHandler(this.InPX_Click);
             // 
-            // txtMaCTPX
+            // txtMaNV
             // 
-            this.txtMaCTPX.Location = new System.Drawing.Point(143, 19);
-            this.txtMaCTPX.Name = "txtMaCTPX";
-            this.txtMaCTPX.Size = new System.Drawing.Size(150, 25);
-            this.txtMaCTPX.TabIndex = 10;
-            // 
-            // txtMaKho
-            // 
-            this.txtMaKho.Location = new System.Drawing.Point(143, 81);
-            this.txtMaKho.Name = "txtMaKho";
-            this.txtMaKho.Size = new System.Drawing.Size(150, 25);
-            this.txtMaKho.TabIndex = 11;
-            // 
-            // txtMaKeSach
-            // 
-            this.txtMaKeSach.Location = new System.Drawing.Point(143, 112);
-            this.txtMaKeSach.Name = "txtMaKeSach";
-            this.txtMaKeSach.Size = new System.Drawing.Size(150, 25);
-            this.txtMaKeSach.TabIndex = 12;
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.Location = new System.Drawing.Point(143, 143);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(150, 25);
-            this.txtSoLuong.TabIndex = 13;
-            // 
-            // txtMaDauSach
-            // 
-            this.txtMaDauSach.Location = new System.Drawing.Point(143, 174);
-            this.txtMaDauSach.Name = "txtMaDauSach";
-            this.txtMaDauSach.Size = new System.Drawing.Size(150, 25);
-            this.txtMaDauSach.TabIndex = 14;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(37, 146);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 17);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Số lượng";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(27, 177);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(85, 17);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Mã đầu sách";
+            this.txtMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNV.Location = new System.Drawing.Point(412, 548);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(150, 26);
+            this.txtMaNV.TabIndex = 84;
             // 
             // UC_PhieuXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.bunifuFlatButton8);
+            this.Controls.Add(this.txtMaNV);
+            this.Controls.Add(this.InPX);
             this.Controls.Add(this.btnDeleteCTPX);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnUpdateCTPX);
@@ -626,8 +627,7 @@
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.txtTenNV);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -662,8 +662,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
@@ -678,7 +677,7 @@
         private System.Windows.Forms.DataGridView dtgvCTPhieuXuat;
         private Bunifu.Framework.UI.BunifuFlatButton btnUpdateCTPX;
         private Bunifu.Framework.UI.BunifuFlatButton btnHuy;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton8;
+        private Bunifu.Framework.UI.BunifuFlatButton InPX;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -687,5 +686,6 @@
         private System.Windows.Forms.TextBox txtMaKeSach;
         private System.Windows.Forms.TextBox txtMaKho;
         private System.Windows.Forms.TextBox txtMaCTPX;
+        private System.Windows.Forms.TextBox txtMaNV;
     }
 }

@@ -40,6 +40,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtMaCTPN = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtMaDauSach = new System.Windows.Forms.TextBox();
@@ -62,10 +64,8 @@
             this.btnHuy = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnUpdateCTPN = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAddCTPN = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton8 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.InPN = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtMaNV = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -249,6 +249,22 @@
             this.groupBox2.TabIndex = 54;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin nhập hàng";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(51, 157);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 17);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Số lượng";
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Location = new System.Drawing.Point(155, 149);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(150, 25);
+            this.txtSoLuong.TabIndex = 17;
             // 
             // txtMaCTPN
             // 
@@ -552,40 +568,41 @@
             this.btnAddCTPN.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCTPN.Click += new System.EventHandler(this.btnAddCTPN_Click);
             // 
-            // bunifuFlatButton8
+            // InPN
             // 
-            this.bunifuFlatButton8.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton8.BorderRadius = 0;
-            this.bunifuFlatButton8.ButtonText = "In PX";
-            this.bunifuFlatButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton8.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton8.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton8.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton8.Iconimage")));
-            this.bunifuFlatButton8.Iconimage_right = null;
-            this.bunifuFlatButton8.Iconimage_right_Selected = null;
-            this.bunifuFlatButton8.Iconimage_Selected = null;
-            this.bunifuFlatButton8.IconMarginLeft = 0;
-            this.bunifuFlatButton8.IconMarginRight = 0;
-            this.bunifuFlatButton8.IconRightVisible = true;
-            this.bunifuFlatButton8.IconRightZoom = 0D;
-            this.bunifuFlatButton8.IconVisible = true;
-            this.bunifuFlatButton8.IconZoom = 30D;
-            this.bunifuFlatButton8.IsTab = false;
-            this.bunifuFlatButton8.Location = new System.Drawing.Point(644, 543);
-            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton8.Name = "bunifuFlatButton8";
-            this.bunifuFlatButton8.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton8.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton8.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton8.selected = false;
-            this.bunifuFlatButton8.Size = new System.Drawing.Size(98, 30);
-            this.bunifuFlatButton8.TabIndex = 86;
-            this.bunifuFlatButton8.Text = "In PX";
-            this.bunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton8.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton8.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InPN.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.InPN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.InPN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InPN.BorderRadius = 0;
+            this.InPN.ButtonText = "In PN";
+            this.InPN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.InPN.DisabledColor = System.Drawing.Color.Gray;
+            this.InPN.Iconcolor = System.Drawing.Color.Transparent;
+            this.InPN.Iconimage = ((System.Drawing.Image)(resources.GetObject("InPN.Iconimage")));
+            this.InPN.Iconimage_right = null;
+            this.InPN.Iconimage_right_Selected = null;
+            this.InPN.Iconimage_Selected = null;
+            this.InPN.IconMarginLeft = 0;
+            this.InPN.IconMarginRight = 0;
+            this.InPN.IconRightVisible = true;
+            this.InPN.IconRightZoom = 0D;
+            this.InPN.IconVisible = true;
+            this.InPN.IconZoom = 30D;
+            this.InPN.IsTab = false;
+            this.InPN.Location = new System.Drawing.Point(644, 543);
+            this.InPN.Margin = new System.Windows.Forms.Padding(5);
+            this.InPN.Name = "InPN";
+            this.InPN.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.InPN.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.InPN.OnHoverTextColor = System.Drawing.Color.White;
+            this.InPN.selected = false;
+            this.InPN.Size = new System.Drawing.Size(98, 30);
+            this.InPN.TabIndex = 86;
+            this.InPN.Text = "In PN";
+            this.InPN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.InPN.Textcolor = System.Drawing.Color.White;
+            this.InPN.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InPN.Click += new System.EventHandler(this.InPN_Click);
             // 
             // txtMaNV
             // 
@@ -595,29 +612,13 @@
             this.txtMaNV.Size = new System.Drawing.Size(150, 26);
             this.txtMaNV.TabIndex = 87;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 157);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 17);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Số lượng";
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.Location = new System.Drawing.Point(155, 149);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(150, 25);
-            this.txtSoLuong.TabIndex = 17;
-            // 
             // UC_PhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.txtMaNV);
             this.Controls.Add(this.btnDeleteCTPN);
-            this.Controls.Add(this.bunifuFlatButton8);
+            this.Controls.Add(this.InPN);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnUpdateCTPN);
             this.Controls.Add(this.btnAddCTPN);
@@ -674,7 +675,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnAddCTPN;
         private Bunifu.Framework.UI.BunifuFlatButton btnDeleteCTPN;
         private Bunifu.Framework.UI.BunifuFlatButton btnSearch;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton8;
+        private Bunifu.Framework.UI.BunifuFlatButton InPN;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.TextBox txtMaNCC;
         private System.Windows.Forms.TextBox txtMaKho;

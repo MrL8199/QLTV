@@ -48,12 +48,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAddPKK = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton8 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.InPKK = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvKiemKe)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -302,22 +302,13 @@
             this.label9.TabIndex = 72;
             this.label9.Text = "Mã NV";
             // 
-            // textBox2
+            // txtTenNV
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(160, 487);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 26);
-            this.textBox2.TabIndex = 71;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(402, 487);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(149, 28);
-            this.comboBox3.TabIndex = 70;
+            this.txtTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenNV.Location = new System.Drawing.Point(160, 487);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(149, 26);
+            this.txtTenNV.TabIndex = 71;
             // 
             // label8
             // 
@@ -400,52 +391,61 @@
             this.btnAddPKK.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPKK.Click += new System.EventHandler(this.btnAddPKK_Click);
             // 
-            // bunifuFlatButton8
+            // InPKK
             // 
-            this.bunifuFlatButton8.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton8.BorderRadius = 0;
-            this.bunifuFlatButton8.ButtonText = "In PKK";
-            this.bunifuFlatButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton8.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton8.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton8.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton8.Iconimage")));
-            this.bunifuFlatButton8.Iconimage_right = null;
-            this.bunifuFlatButton8.Iconimage_right_Selected = null;
-            this.bunifuFlatButton8.Iconimage_Selected = null;
-            this.bunifuFlatButton8.IconMarginLeft = 0;
-            this.bunifuFlatButton8.IconMarginRight = 0;
-            this.bunifuFlatButton8.IconRightVisible = true;
-            this.bunifuFlatButton8.IconRightZoom = 0D;
-            this.bunifuFlatButton8.IconVisible = true;
-            this.bunifuFlatButton8.IconZoom = 30D;
-            this.bunifuFlatButton8.IsTab = false;
-            this.bunifuFlatButton8.Location = new System.Drawing.Point(623, 485);
-            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton8.Name = "bunifuFlatButton8";
-            this.bunifuFlatButton8.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton8.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton8.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton8.selected = false;
-            this.bunifuFlatButton8.Size = new System.Drawing.Size(98, 30);
-            this.bunifuFlatButton8.TabIndex = 86;
-            this.bunifuFlatButton8.Text = "In PKK";
-            this.bunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton8.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton8.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InPKK.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.InPKK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.InPKK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InPKK.BorderRadius = 0;
+            this.InPKK.ButtonText = "In PKK";
+            this.InPKK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.InPKK.DisabledColor = System.Drawing.Color.Gray;
+            this.InPKK.Iconcolor = System.Drawing.Color.Transparent;
+            this.InPKK.Iconimage = ((System.Drawing.Image)(resources.GetObject("InPKK.Iconimage")));
+            this.InPKK.Iconimage_right = null;
+            this.InPKK.Iconimage_right_Selected = null;
+            this.InPKK.Iconimage_Selected = null;
+            this.InPKK.IconMarginLeft = 0;
+            this.InPKK.IconMarginRight = 0;
+            this.InPKK.IconRightVisible = true;
+            this.InPKK.IconRightZoom = 0D;
+            this.InPKK.IconVisible = true;
+            this.InPKK.IconZoom = 30D;
+            this.InPKK.IsTab = false;
+            this.InPKK.Location = new System.Drawing.Point(623, 485);
+            this.InPKK.Margin = new System.Windows.Forms.Padding(5);
+            this.InPKK.Name = "InPKK";
+            this.InPKK.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.InPKK.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.InPKK.OnHoverTextColor = System.Drawing.Color.White;
+            this.InPKK.selected = false;
+            this.InPKK.Size = new System.Drawing.Size(98, 30);
+            this.InPKK.TabIndex = 86;
+            this.InPKK.Text = "In PKK";
+            this.InPKK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.InPKK.Textcolor = System.Drawing.Color.White;
+            this.InPKK.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InPKK.Click += new System.EventHandler(this.InPKK_Click);
+            // 
+            // txtMaNV
+            // 
+            this.txtMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNV.Location = new System.Drawing.Point(397, 489);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(149, 26);
+            this.txtMaNV.TabIndex = 87;
             // 
             // UC_KiemKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.bunifuFlatButton8);
+            this.Controls.Add(this.txtMaNV);
+            this.Controls.Add(this.InPKK);
             this.Controls.Add(this.bunifuFlatButton3);
             this.Controls.Add(this.bunifuFlatButton7);
             this.Controls.Add(this.btnAddPKK);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.txtTenNV);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -481,15 +481,15 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuFlatButton btnSearch;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label label8;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton7;
         private Bunifu.Framework.UI.BunifuFlatButton btnAddPKK;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton8;
+        private Bunifu.Framework.UI.BunifuFlatButton InPKK;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.TextBox txtMaKho;
         private System.Windows.Forms.TextBox txtMaPhieuKK;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtMaNV;
     }
 }
