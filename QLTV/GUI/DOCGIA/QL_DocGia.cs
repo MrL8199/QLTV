@@ -26,6 +26,7 @@ namespace QLTV.GUI.DOCGIA
         {
             dtgv_docgia.DataSource = DAL.DocGia_DAL.Instance.GetListDocGia();
             dtgv_vipham.DataSource = DAL.DocGia_DAL.Instance.GetListViPham();
+            DAL.DocGia_DAL.Instance.UpdateStatusCard();
             //dtgv_docgia.Refresh();
         }
 

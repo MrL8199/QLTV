@@ -84,6 +84,7 @@
             this.Controls.Add(this.btn_QL_DocGia);
             this.Controls.Add(this.btn_QL_Sach);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thư viện";
             this.ResumeLayout(false);
 

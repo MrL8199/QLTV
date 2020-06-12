@@ -197,5 +197,13 @@ namespace QLTV.DAL
 
             return data;
         }
+
+        public void UpdateStatusCard()
+        {
+            string query = "EXEC Update_Status_IDCard";
+
+            DataProvider.Instance.ExecuteNonQuery(query);
+
+        }
     }
 }
